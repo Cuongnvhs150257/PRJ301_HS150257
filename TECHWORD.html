@@ -42,15 +42,53 @@
                     <div class="right">
                         <p>Chọn Danh Mục Tin Tức Công Nghệ</p>
                         <div class="choice">
-                            <div class="item">
-                                <img src="/image/pc1.jpg" alt="">
+                            <div class="item item1">
+                                <img id="img" src="/image/pc1.jpg" onclick="changeImg()">
+                                <h2>PC_Windows</h2>
                             </div>
-                            <div class="item">
-                                <img src="/image/phone1.jpg" alt="">
+                            <div class="item item2">
+                                <img id="img2" src="/image/phone1.jpg" onclick="changeImg2()">
+                                <h2>Smartphone</h2>
                             </div>
-                            <div class="item">
-                                <img src="/image/smartwatch1.jpg" alt="">
+                            <div class="item item3">
+                                <img id="img3" src="/image/smartwatch1.jpg" onclick="changeImg3()">
+                                <h2>Smartwatch</h2>
                             </div>
+                            <script>
+                                var index = 1;
+                                changeImg = function(){
+                                    var imgs = ["/image/pc1.jpg","/image/pc2.jpg","/image/pc3.jpg"];
+                                    document.getElementById('img').src=imgs[index];
+                                    index++;
+                                    if(index==3){
+                                        index=0;
+                                    }
+                                }
+                                setInterval(changeImg,3000);
+
+                                var index2 = 1;
+                                changeImg2 = function(){
+                                    var imgs2 = ["/image/phone1.jpg","/image/phone2.jpg","/image/phone3.jpg"];
+                                    document.getElementById('img2').src=imgs2[index2];
+                                    index2++;
+                                    if(index2==3){
+                                        index2=0;
+                                    }
+                                }
+                                setInterval(changeImg2,3000);
+
+                                var index3 = 1;
+                                changeImg3 = function(){
+                                    var imgs3 = ["/image/smartwatch1.jpg","/image/smartwatch2.jpg","/image/smartwatch3.jpg"];
+                                    document.getElementById('img3').src=imgs3[index3];
+                                    index3++;
+                                    if(index3==3){
+                                        index3=0;
+                                    }
+                                }
+                                setInterval(changeImg3,3000);
+
+                            </script>
                         </div>
                     </div>
                 
