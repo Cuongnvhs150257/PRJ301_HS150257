@@ -34,6 +34,10 @@
     margin-bottom: 25px;
     text-decoration: none;
 }
+.menu ul li a img{
+    width: 20px;
+    height: auto;
+}
 .content{
     width: 1000px;
     height: auto;
@@ -48,11 +52,18 @@
     list-style: none;
     padding-left: 0px;
 }
-.left ul li{
+.left ul li a{
     color: #6caeed;
-    border-bottom: 1px solid blue;
     height: 30px;
     line-height: 30px;
+    text-decoration: none;
+}
+.left ul li img{
+    width: 30px;
+    height: auto;
+}
+.left ul li{
+    padding-bottom: 5px;
 }
 .left p{
     width: 200px;
@@ -95,4 +106,13 @@ h2{
     top: 250px;
     left: 180px;
 }
-
+.footer{
+    width: 800px;
+    height: 180px;
+    padding-top: 50px;
+     
+}
+.footer h3, h4, h5, a{
+    color: rgb(12, 122, 248);
+    text-decoration: none;
+}
