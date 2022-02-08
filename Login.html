@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="image/icon1.png">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stytlelogin.css">
+    <title>Đăng Nhập | TECHWORD.VN</title>
+</head>
+<body>
+    <div>
+        <div class="containter">
+            <div class="header">
+                <div class="logo">
+                    <a href=""><img src="image/icon1.png" alt="logo"></a>
+                </div>
+
+                <div class="menu">
+                    <ul>
+                        <li><a href="/TECHWORD.html">Trang chủ</a></li>
+                        <li><a href="">Đăng tin</a></li>
+                        <li><a href="/Login.html">Tài Khoản</a></li>
+                        <li><a href=""><img src="/icon/notication1.png" alt=""></a></li>
+                        <li><a href=""><img src="/icon/search1.png" alt=""></a></li>
+                    </ul>
+                </div>
+                <div class="search">
+
+                </div>
+
+            </div>
+
+            <div class="content">
+                <div class="left">
+                    <p>Chia sẻ trang này</p>
+                    <ul>
+                        <li><img src="/icon/facebook1.png" alt=""> <a href="https://www.facebook.com/">Facebook</a></li>
+                        <li><img src="/icon/twitter1.png" alt=""> <a href="https://twitter.com/home?lang=vi">Twitter</a></li>
+                        <li><img src="/icon/reddit1.png" alt=""> <a href="https://www.reddit.com/">Reddit</a></li>
+                        <li><img src="/icon/zalo1.png" alt=""> <a href="https://chat.zalo.me/?null">Zalo</a></li>
+                        <li><img src="/icon/youtube1.png" alt=""> <a href="https://www.youtube.com/">Youtube</a></li>
+                    </ul>
+                </div>
+                <div class="login">
+                    <h2>Đăng Nhập</h2>
+                    <br>
+                    <p>Tên tài khoản</p>
+                    <br>
+                    <input type="text" name="username" placeholder="Nhập tên tài khoản">
+                    <br>
+                    <p class="p2">Mật khẩu</p>
+                    <br>
+                    <div class="pass">
+                        <input type="password" name="password" placeholder="Nhập mật khẩu">
+                        <img onclick="hidepass()">
+                        <script>
+                            function hidepass(){
+                                document.getElementById('pass').type="text";
+                            }
+                        </script>
+                    </div>
+                    <br>
+                    <div class="check">
+                        <input type="checkbox">Nhớ mật khẩu
+                    </div>
+                    <br>
+                    <button>Đăng nhập</button>
+                    <br>
+                    <a class="a1" href="#">Quên mật khẩu?</a>
+                    <br>
+                    <a class="a2" href="#">Tạo tài khoản mới</a>
+
+                </div>
+    </div>
+    <div class="footer">
+        <div class="about us">
+            <h3>Về chúng tôi</h3>
+            <h4>Đây là trang tin công nghệ TECHWORD thuộc dự án PRJ301 - ĐH FPT</h4>
+            <h5>Chủ quản: <a class="af" href="https://www.facebook.com/nguyenvan.cuong.35762241">Nguyễn Văn Cương</a></h5>
+        </div>
+    </div>
+</body>
+</html>
