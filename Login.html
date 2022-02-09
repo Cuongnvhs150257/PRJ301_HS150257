@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="stytlelogin.css">
+    <script src="/loginjs.js"></script>
     <title>Đăng Nhập | TECHWORD.VN</title>
 </head>
 <body>
@@ -42,36 +43,40 @@
                         <li><img src="/icon/youtube1.png" alt=""> <a href="https://www.youtube.com/">Youtube</a></li>
                     </ul>
                 </div>
-                <div class="login">
-                    <h2>Đăng Nhập</h2>
-                    <br>
-                    <p>Tên tài khoản</p>
-                    <br>
-                    <input type="text" name="username" placeholder="Nhập tên tài khoản">
-                    <br>
-                    <p class="p2">Mật khẩu</p>
-                    <br>
-                    <div class="pass">
-                        <input type="password" name="password" placeholder="Nhập mật khẩu">
-                        <img onclick="hidepass()">
-                        <script>
-                            function hidepass(){
-                                document.getElementById('pass').type="text";
-                            }
-                        </script>
+                <form action="" id="loginform" method="post">
+                    <div class="login">
+                        <h2>Đăng Nhập</h2>
+                        <br>
+                        <p>Tên tài khoản</p>
+                        <br>
+                        <input type="text" id="username" name="username" placeholder="Nhập tên tài khoản">
+                        <span id="username_error"></span>
+                        <br>
+                        <p class="p2">Mật khẩu</p>
+                        <br>
+                        <div class="pass">
+                            <input type="password" id="password" name="password" placeholder="Nhập mật khẩu">
+                            <span id="password_error"></span>
+                            <img onclick="hidepass()">
+                            <script>
+                                function hidepass(){
+                                    document.getElementById('pass').type="text";
+                                }
+                            </script>
+                        </div>
+                        <br>
+                        <div class="check">
+                            <input type="checkbox">Nhớ mật khẩu
+                        </div>
+                        <br>
+                        <button type="submit" onclick="return validate();" >Đăng nhập</button>
+                        <br>
+                        <a class="a1" href="#">Quên mật khẩu?</a>
+                        <br>
+                        <a class="a2" href="/register.html">Tạo tài khoản mới</a>
+    
                     </div>
-                    <br>
-                    <div class="check">
-                        <input type="checkbox">Nhớ mật khẩu
-                    </div>
-                    <br>
-                    <button>Đăng nhập</button>
-                    <br>
-                    <a class="a1" href="#">Quên mật khẩu?</a>
-                    <br>
-                    <a class="a2" href="#">Tạo tài khoản mới</a>
-
-                </div>
+                </form>
     </div>
     <div class="footer">
         <div class="about us">
