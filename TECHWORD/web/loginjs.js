@@ -1,27 +1,13 @@
-function getValue(id){
-    return document.getElementById.value.trim();
-}
+function send(){
+    var arr = document.getElementsByTagName('input');
+    var name= arr[0].value;
+    var pass = arr[1].value;
+    var check = arr[2].value;
 
-function showError(key, mess){
-    document.getElementsById(key + '_error').innerHTML=mess;
-}
-
-function validate(){
-    
-    var flag = true;
-    var username = getValue('username');
-    if(username == '' || username.length < 5 || !/[a-zA-Z0-9]/.test(username)){
-        flag = false;
-        showError('username', 'Vui lòng kiểm tra lại tên');
-        
+    if(name == "" || pass == ""){
+        alert("Bạn không thể để trống tài khoản và mật khẩu!");
+        return;
     }
-
-    var password = getValue('password');
-    if(password == '' || password.length < 8){
-        flag = false;
-        showError('username', 'Vui lòng kiểm tra lại mật khẩu');
-    }
-
+    var choice = confirm('Bạn đã đăng nhập thành công vào TECHWORD.VN');
     
-    return flag;
 }
