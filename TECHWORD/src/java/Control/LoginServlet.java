@@ -5,6 +5,9 @@
  */
 package Control;
 
+import Context.BaseDAO;
+import DAO.AccountDAO;
+import Entity.Account;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -34,6 +37,7 @@ public class LoginServlet extends HttpServlet {
             String user = request.getParameter("username");
             String pass = request.getParameter("password");
             
+            /*
             String pass1 = "12345";
             
             if(pass.equals(pass1)){
@@ -41,6 +45,16 @@ public class LoginServlet extends HttpServlet {
             }else{
                 response.sendRedirect("Login.html");
             }
+            */
+            
+            AccountDAO dao = new AccountDAO();
+            Account a = dao.login(user, pass);
+            if(a == null){
+                request.getRequestDispatcher("Login.html").forward(request, response);
+            }else{
+                request.getRequestDispatcher("TECHWORD.html").forward(request, response);
+            }
+            
             
         } catch (Exception e) {
         }
