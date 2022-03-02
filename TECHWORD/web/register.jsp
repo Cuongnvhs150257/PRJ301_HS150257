@@ -1,3 +1,4 @@
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -19,9 +20,9 @@
 
                     <div class="menu">
                         <ul>
-                            <li><a href="TECHWORD.html">Trang chủ</a></li>
-                            <li><a href="Up.html">Đăng tin</a></li>
-                            <li><a href="Login.html">Tài Khoản</a></li>
+                            <li><a href="TECHWORD.jsp">Trang chủ</a></li>
+                            <li><a href="Up.jsp">Đăng tin</a></li>
+                            <li><a href="Login.jsp">Tài Khoản</a></li>
                             <li><a href=""><img src="icon/notication1.png" alt=""></a></li>
                             <li><a href=""><img src="icon/search1.png" alt=""></a></li>
                         </ul>
@@ -34,7 +35,7 @@
 
                 <div class="content">
                     <div class="left">
-                        <p>Chia sẻ trang này</p>
+                        <p>Chia Sẻ Trang Này</p>
                         <ul>
                             <li><img src="icon/facebook1.png" alt=""> <a href="https://www.facebook.com/">Facebook</a></li>
                             <li><img src="icon/twitter1.png" alt=""> <a href="https://twitter.com/home?lang=vi">Twitter</a></li>
@@ -47,11 +48,11 @@
                     <div class="register">
                         <h2>Đăng Ký Tài Khoản</h2>
                         <br>
-                        <p>Tên tài khoản</p>
+                        <p>Tên Tài Khoản</p>
                         <br>
                         <input type="text" name="username" placeholder="Nhập tên tài khoản (bắt buộc)">
                         <br>
-                        <p class="p2">Mật khẩu</p>
+                        <p class="p2">Mật Khẩu</p>
                         <br>
                         <div class="pass">
                             <input type="text" name="password" placeholder="Nhập mật khẩu (bắt buộc)">
@@ -85,10 +86,10 @@
                         </div>
                         <br>
                         <div class="check">
-                            <input type="checkbox">Tôi đồng ý với các quy tắc của trang tin
+                            <input type="checkbox">Tôi đồng ý với những quy tắc của trang tin
                         </div>
                         <br>
-                        <button onclick="send()" type="submit" >Đăng ký</button>
+                        <button onclick="send()" type="submit" >Đăng Ký</button>
 
 
                     </div>
@@ -96,9 +97,9 @@
                 </div>
                 <div class="footer">
                     <div class="about us">
-                        <h3>Về chúng tôi</h3>
+                        <h3>Về Chúng Tôi</h3>
                         <h4>Đây là trang tin công nghệ TECHWORD thuộc dự án PRJ301 - ĐH FPT</h4>
-                        <h5>Chủ quản: <a class="af" href="https://www.facebook.com/nguyenvan.cuong.35762241">Nguyễn Văn Cương</a></h5>
+                        <h5>Chủ Quản: <a href="https://www.facebook.com/nguyenvan.cuong.35762241">Nguyễn Văn Cương</a></h5>
                     </div>
                 </div>
         </form>   

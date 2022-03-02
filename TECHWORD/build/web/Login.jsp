@@ -1,3 +1,4 @@
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,9 +21,9 @@
 
                     <div class="menu">
                         <ul>
-                            <li><a href="TECHWORD.html">Trang chủ</a></li>
-                            <li><a href="Up.html">Đăng tin</a></li>
-                            <li><a href="Login.html">Tài Khoản</a></li>
+                            <li><a href="TECHWORD.jsp">Trang chủ</a></li>
+                            <li><a href="Up.jsp">Đăng tin</a></li>
+                            <li><a href="Login.jsp">Tài Khoản</a></li>
                             <li><a href=""><img src="icon/notication1.png" alt=""></a></li>
                             <li><a href=""><img src="icon/search1.png" alt=""></a></li>
                         </ul>
@@ -35,7 +36,7 @@
 
                 <div class="content">
                     <div class="left">
-                        <p>Chia sẻ trang này</p>
+                        <p>Chia Sẻ Trang Này</p>
                         <ul>
                             <li><img src="icon/facebook1.png" alt=""> <a href="https://www.facebook.com/">Facebook</a></li>
                             <li><img src="icon/twitter1.png" alt=""> <a href="https://twitter.com/home?lang=vi">Twitter</a></li>
@@ -67,23 +68,23 @@
                             </div>
                             <br>
                             <div class="check">
-                                <input type="checkbox">Nhớ mật khẩu
+                                <input type="checkbox">Nhớ Mật Khẩu
                             </div>
                             <br>
-                            <button type="submit" onclick="send()" >Đăng nhập</button>
+                            <button type="submit" onclick="send()" >Đăng Nhập</button>
                             <br>
-                            <a class="a1" href="#">Quên mật khẩu?</a>
+                            <a class="a1" href="#">Quên Mật Khẩu?</a>
                             <br>
-                            <a class="a2" href="register.html">Tạo tài khoản mới</a>
+                            <a class="a2" href="register.jsp">Tạo Tài Khoản Mới</a>
 
                         </div>
                     </form>
                 </div>
                 <div class="footer">
                     <div class="about us">
-                        <h3>Về chúng tôi</h3>
+                        <h3>Về Chúng Tôi</h3>
                         <h4>Đây là trang tin công nghệ TECHWORD thuộc dự án PRJ301 - ĐH FPT</h4>
-                        <h5>Chủ quản: <a class="af" href="https://www.facebook.com/nguyenvan.cuong.35762241">Nguyễn Văn Cương</a></h5>
+                        <h5>Chủ Quản: <a href="https://www.facebook.com/nguyenvan.cuong.35762241">Nguyễn Văn Cương</a></h5>
                     </div>
                 </div>
             </form>

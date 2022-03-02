@@ -50,9 +50,10 @@ public class LoginServlet extends HttpServlet {
             AccountDAO dao = new AccountDAO();
             Account a = dao.login(user, pass);
             if(a == null){
-                request.getRequestDispatcher("Login.html").forward(request, response);
+                request.setAttribute("mess", "Sai tên tài khoản hoặc mật khẩu");
+                request.getRequestDispatcher("Login.jsp").forward(request, response);
             }else{
-                request.getRequestDispatcher("TECHWORD.html").forward(request, response);
+                request.getRequestDispatcher("TECHWORD.jsp").forward(request, response);
             }
             
             

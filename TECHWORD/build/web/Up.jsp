@@ -1,3 +1,4 @@
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,11 +19,11 @@
 
                 <div class="menu">
                     <ul>
-                        <li><a href="TECHWORD.html">Trang chủ</a></li>
-                        <li><a href="Up.html">Đăng tin</a></li>
-                        <li><a href="Login.html">Tài Khoản</a></li>
-                        <li><a href=""><img src="icon/notication1.png" alt=""></a></li>
-                        <li><a href=""><img src="icon/search1.png" alt=""></a></li>
+                        <li><a href="TECHWORD.jsp">Trang chủ</a></li>
+                            <li><a href="Up.jsp">Đăng tin</a></li>
+                            <li><a href="Login.jsp">Tài Khoản</a></li>
+                            <li><a href=""><img src="icon/notication1.png" alt=""></a></li>
+                            <li><a href=""><img src="icon/search1.png" alt=""></a></li>
                     </ul>
                 </div>
                 <div class="search">
@@ -33,7 +34,7 @@
 
             <div class="content">
                 <div class="left">
-                    <p>Chia sẻ trang này</p>
+                    <p>Chia Sẻ Trang Này</p>
                     <ul>
                         <li><img src="icon/facebook1.png" alt=""> <a href="https://www.facebook.com/">Facebook</a></li>
                         <li><img src="icon/twitter1.png" alt=""> <a href="https://twitter.com/home?lang=vi">Twitter</a></li>
@@ -48,7 +49,7 @@
                     
                     <table>
                         <tr>
-                            <th><a href="TECHWORD.html">PC_Windows</a></th>
+                            <th><a href="TECHWORD.jsp">PC_Windows</a></th>
                         </tr>
                     </table>
 
@@ -60,7 +61,7 @@
                        
                     <table>
                         <tr>
-                            <th><a href="TECHWORD.html">Smartphone</a></th>
+                            <th><a href="TECHWORD.jsp">Smartphone</a></th>
                         </tr>
                     </table>
                     <div class="a1">
@@ -71,7 +72,7 @@
 
                     <table>
                         <tr>
-                            <th><a href="TECHWORD.html">Smartwatch</a></th>
+                            <th><a href="TECHWORD.jsp">Smartwatch</a></th>
                         </tr>
                     </table>
                     <div class="a1">
@@ -82,9 +83,9 @@
     </div>
     <div class="footer">
         <div class="about us">
-            <h3>Về chúng tôi</h3>
+            <h3>Về Chúng Tôi</h3>
             <h4>Đây là trang tin công nghệ TECHWORD thuộc dự án PRJ301 - ĐH FPT</h4>
-            <h5>Chủ quản: <a href="https://www.facebook.com/nguyenvan.cuong.35762241">Nguyễn Văn Cương</a></h5>
+            <h5>Chủ Quản: <a href="https://www.facebook.com/nguyenvan.cuong.35762241">Nguyễn Văn Cương</a></h5>
         </div>
     </div>
 </body>
