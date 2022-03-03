@@ -29,6 +29,12 @@
                 <div class="search">
 
                 </div>
+                
+                <div class="user">
+                    <a href=""><img src="icon/user1.png" alt=""></a>
+                    <p>${user}</p>
+                    <a id="out" href="Login.jsp">Đăng xuất</a>
+                </div>
 
             </div>
 

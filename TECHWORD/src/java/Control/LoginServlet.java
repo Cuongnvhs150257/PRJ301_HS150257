@@ -33,32 +33,7 @@ public class LoginServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        try {
-            String user = request.getParameter("username");
-            String pass = request.getParameter("password");
-            
-            /*
-            String pass1 = "12345";
-            
-            if(pass.equals(pass1)){
-                response.sendRedirect("TECHWORD.html");
-            }else{
-                response.sendRedirect("Login.html");
-            }
-            */
-            
-            AccountDAO dao = new AccountDAO();
-            Account a = dao.login(user, pass);
-            if(a == null){
-                request.setAttribute("mess", "Sai tên tài khoản hoặc mật khẩu");
-                request.getRequestDispatcher("Login.jsp").forward(request, response);
-            }else{
-                request.getRequestDispatcher("TECHWORD.jsp").forward(request, response);
-            }
-            
-            
-        } catch (Exception e) {
-        }
+        
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -87,7 +62,33 @@ public class LoginServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        try {
+            String user = request.getParameter("username");
+            String pass = request.getParameter("password");
+            
+            /*
+            String pass1 = "12345";
+            
+            if(pass.equals(pass1)){
+                response.sendRedirect("TECHWORD.html");
+            }else{
+                response.sendRedirect("Login.html");
+            }
+            */
+            
+            AccountDAO dao = new AccountDAO();
+            Account a = dao.login(user, pass);
+            if(a == null){
+                
+                request.getRequestDispatcher("Login.jsp").forward(request, response);
+            }else{
+                request.setAttribute("user", user);
+                request.getRequestDispatcher("TECHWORD.jsp").forward(request, response);
+            }
+            
+            
+        } catch (Exception e) {
+        }
     }
 
     /**

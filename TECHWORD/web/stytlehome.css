@@ -39,6 +39,7 @@
     width: 20px;
     height: auto;
 }
+
 .content{
     width: 1000px;
     height: auto;
@@ -116,4 +117,31 @@ h2{
 .footer h3, h4, h5, a{
     color: rgb(12, 122, 248);
     text-decoration: none;
+}
+.user {
+    width: 30%;
+    height: auto;
+    display: flex;
+}
+.user a img{
+    margin-top: 5px;
+    width: 40px;
+    height: auto;
+}
+.user p {
+    width: 50%;
+    height: 30px;
+    margin-left: 10px;
+    margin-top: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #e7e7e7;
+}
+#out{
+    width: 30%;
+    height: 30px;
+    margin-top: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #e7e7e7;
 }

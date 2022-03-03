@@ -5,8 +5,7 @@
         <link rel="icon" href="image/icon1.png">
         <title>TECHWORD | TECHWORD.VN</title>
         <meta charset="utf-8">
-        <link rel="stylesheet" href="stytle.css">
-     
+        <link href="stytlehome.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
         <div>
@@ -25,8 +24,16 @@
                             <li><a href=""><img src="icon/search1.png" alt=""></a></li>
                         </ul>
                     </div>
+                     
                     <div class="search">
-
+                        
+                    </div>
+                    <div class="user">
+                        <a href=""><img src="icon/user1.png" alt=""></a>
+                        <p>${user}</p>
+                        
+                        <a id="out" href="Login.jsp">Đăng xuất</a>
+                        
                     </div>
     
                 </div>
