@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
@@ -33,7 +34,16 @@
                 <div class="user">
                     <a href=""><img src="icon/user1.png" alt=""></a>
                     <p>${user}</p>
-                    <a id="out" href="Login.jsp">Đăng xuất</a>
+                    <div class="logout">
+                        <c:if test="${sessionScope.acc != null}">
+                            <a id="username">Hello ${sessionScope.acc.name}</a>
+                            <a id="out" href="TECHWORD.jsp">Đăng xuất</a>
+                        </c:if>
+
+                        <c:if test="${sessionScope.acc == null}">
+                            <a id="out" href="Login.jsp">Đăng nhập</a>
+                        </c:if>
+                    </div>
                 </div>
 
             </div>

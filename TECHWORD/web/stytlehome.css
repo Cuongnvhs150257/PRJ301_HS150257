@@ -128,7 +128,16 @@ h2{
     width: 40px;
     height: auto;
 }
-.user p {
+.user p{
+    width: 30%;
+    height: 30px;
+    margin-left: 10px;
+    margin-top: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #e7e7e7;
+}
+#username{
     width: 50%;
     height: 30px;
     margin-left: 10px;
@@ -144,4 +153,5 @@ h2{
     font-size: 18px;
     font-weight: bold;
     color: #e7e7e7;
+    
 }

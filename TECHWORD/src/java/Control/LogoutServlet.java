@@ -5,12 +5,10 @@
  */
 package Control;
 
-import Context.BaseDAO;
-import DAO.AccountDAO;
-import Entity.Account;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -20,7 +18,8 @@ import javax.servlet.http.HttpSession;
  *
  * @author s
  */
-public class LoginServlet extends HttpServlet {
+@WebServlet(name = "LogoutServlet", urlPatterns = {"/LogoutServlet"})
+public class LogoutServlet extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -34,7 +33,12 @@ public class LoginServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        
+        try {
+            HttpSession session = request.getSession();
+            session.removeAttribute("acc");
+            response.sendRedirect("TECHWORD.jsp");
+        } catch (Exception e) {
+        }
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -63,35 +67,7 @@ public class LoginServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        try {
-            String user = request.getParameter("username");
-            String pass = request.getParameter("password");
-            
-            /*
-            String pass1 = "12345";
-            
-            if(pass.equals(pass1)){
-                response.sendRedirect("TECHWORD.html");
-            }else{
-                response.sendRedirect("Login.html");
-            }
-            */
-            
-            AccountDAO dao = new AccountDAO();
-            Account a = dao.login(user, pass);
-            if(a == null){
-                
-                request.getRequestDispatcher("Login.jsp").forward(request, response);
-            }else{
-                HttpSession session = request.getSession();
-                session.setAttribute("acc", a);
-                request.getRequestDispatcher("TECHWORD.jsp").forward(request, response);
-                
-            }
-            
-            
-        } catch (Exception e) {
-        }
+        processRequest(request, response);
     }
 
     /**

@@ -23,8 +23,8 @@ public class AccountDAO {
     
     public Account login(String user, String pass){
         String query = "select * from Account\n" +
-                        "where name = '?'\n" +
-                        "and pass = '?'";
+                        "where name = ?\n" +
+                        "and pass = ?";
         try {
             conn = new BaseDAO().BaseDao();
             ps = conn.prepareStatement(query);
