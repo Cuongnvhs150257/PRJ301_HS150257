@@ -5,12 +5,21 @@
  */
 package Control;
 
+import DAO.AccountDAO;
+import Entity.Account;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.Date;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import static javax.xml.bind.DatatypeConverter.parseDate;
 
 /**
  *
@@ -36,18 +45,21 @@ public class RegisterServlet extends HttpServlet {
             String date = request.getParameter("date");
             String month = request.getParameter("month");
             String year = request.getParameter("year");
+      
+            AccountDAO dao = new AccountDAO();
+            Account a = dao.checkaccountexist(name);
             
+            int datea = Integer.parseInt(date);
+            int montha = Integer.parseInt(month);
+            int yeara = Integer.parseInt(year);
             
-            String name1 = "Cuong";
-            String pass1 = "12345";
-            String date1 = "05";
-            String month1 = "Tháng 3";
-            String year1 = "2001";
+            Date datecover = (Date) new GregorianCalendar(yeara, montha, datea).getTime();
             
-            if(name.equals(name1) && pass.equals(pass1) && date.equals(date1) && year.equals(year1) ){
-                response.sendRedirect("Login.html");
+            if(a == null){
+                dao.Sinup(name, pass, datecover);
+                response.sendRedirect("Login.jsp");
             }else{
-                response.sendRedirect("register.html");
+                response.sendRedirect("register.jsp");
             }
                     
             

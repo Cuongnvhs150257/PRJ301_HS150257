@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Đăng Tin || TECHWORD.VN</title>
-    <link rel="stylesheet" href="styleup.css">
+    <link rel="stylesheet" href="styleup2.css">
 </head>
 <body>
     <div>
@@ -33,11 +33,10 @@
                 
                 <div class="user">
                     <a href=""><img src="icon/user1.png" alt=""></a>
-                    <p>${user}</p>
                     <div class="logout">
                         <c:if test="${sessionScope.acc != null}">
                             <a id="username">Hello ${sessionScope.acc.name}</a>
-                            <a id="out" href="TECHWORD.jsp">Đăng xuất</a>
+                            <a id="out" href="LogoutServlet">Đăng xuất</a>
                         </c:if>
 
                         <c:if test="${sessionScope.acc == null}">

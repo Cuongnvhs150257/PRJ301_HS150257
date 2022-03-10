@@ -8,6 +8,7 @@ package DAO;
 import Context.BaseDAO;
 import Entity.Account;
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
@@ -42,5 +43,40 @@ public class AccountDAO {
         }
         return null;
         
+    }
+    
+    public Account checkaccountexist(String user){
+        String query = "select * from Account\n" +
+                        "where name = ?";
+        try {
+            conn = new BaseDAO().BaseDao();
+            ps = conn.prepareStatement(query);
+            ps.setString(1, user);
+            rs = ps.executeQuery();
+            while(rs.next()){
+                return new Account(rs.getInt(1), 
+                        rs.getString(2), 
+                        rs.getString(3), 
+                        rs.getDate(4));
+            }
+            
+        } catch (Exception e) {
+        }
+        return null;
+        
+    }
+    public void Sinup(String user, String pass, Date dob){
+        String query = "INSERT INTO Account([name],[pass],[dob]) VALUES(?,?,?)";
+    
+        try {
+            conn = new BaseDAO().BaseDao();
+            ps = conn.prepareStatement(query);
+            ps.setString(1, user);
+            ps.setString(2, pass);
+            ps.setDate(3, dob);
+            ps.executeUpdate();
+        } catch (Exception e) {
+        }
+    
     }
 }

@@ -11,7 +11,7 @@
         <title>Tạo Tài Khoản | TECHWORD.VN</title>
     </head>
     <body>
-        <form action="RegisterServlet" method="post">
+        
             <div class="containter">
                 <div class="header">
                     <div class="logo">
@@ -44,7 +44,7 @@
                             <li><img src="icon/youtube1.png" alt=""> <a href="https://www.youtube.com/">Youtube</a></li>
                         </ul>
                     </div>
-
+                    <form action="RegisterServlet" method="post">
                     <div class="register">
                         <h2>Đăng Ký Tài Khoản</h2>
                         <br>
@@ -66,7 +66,7 @@
                         <br>
 
                         <div class="inputdob">
-                            <p>Sinh nhật</p>
+                            <p>Ngày Sinh</p>
                             <input type="text" name="date" placeholder="Ngày">
                             <select name="month">
                                 <option>Tháng 1</option>
@@ -93,7 +93,7 @@
 
 
                     </div>
-
+                    </form>
                 </div>
                 <div class="footer">
                     <div class="about us">
@@ -102,6 +102,6 @@
                         <h5>Chủ Quản: <a href="https://www.facebook.com/nguyenvan.cuong.35762241">Nguyễn Văn Cương</a></h5>
                     </div>
                 </div>
-        </form>   
+            </div>
     </body>
 </html>

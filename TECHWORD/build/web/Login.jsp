@@ -11,7 +11,6 @@
     <title>Đăng Nhập | TECHWORD.VN</title>
 </head>
 <body>
-    <form action="LoginServlet" method="post">
         <div>
             <div class="containter">
                 <div class="header">
@@ -45,7 +44,7 @@
                             <li><img src="icon/youtube1.png" alt=""> <a href="https://www.youtube.com/">Youtube</a></li>
                         </ul>
                     </div>
-                    <form >
+                     <form action="LoginServlet" method="post">
                         <div class="login">
                             <h2>Đăng Nhập</h2>
                             <br>
@@ -78,7 +77,7 @@
                             <a class="a2" href="register.jsp">Tạo Tài Khoản Mới</a>
 
                         </div>
-                    </form>
+                     </form>
                 </div>
                 <div class="footer">
                     <div class="about us">
@@ -87,6 +86,7 @@
                         <h5>Chủ Quản: <a href="https://www.facebook.com/nguyenvan.cuong.35762241">Nguyễn Văn Cương</a></h5>
                     </div>
                 </div>
-            </form>
+            </div>
+        </div>
 </body>
 </html>

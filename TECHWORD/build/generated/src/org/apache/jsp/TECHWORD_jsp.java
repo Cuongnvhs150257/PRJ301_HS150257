@@ -84,20 +84,18 @@ public final class TECHWORD_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                    </div>\r\n");
       out.write("                    <div class=\"user\">\r\n");
       out.write("                        <a href=\"\"><img src=\"icon/user1.png\" alt=\"\"></a>\r\n");
-      out.write("                        <p>");
-      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${user}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-      out.write("</p>\r\n");
-      out.write("                        \r\n");
-      out.write("                        ");
+      out.write("                       \r\n");
+      out.write("                        <div class=\"logout\">\r\n");
+      out.write("                            ");
       if (_jspx_meth_c_if_0(_jspx_page_context))
         return;
       out.write("\r\n");
-      out.write("                        \r\n");
-      out.write("                        ");
+      out.write("\r\n");
+      out.write("                            ");
       if (_jspx_meth_c_if_1(_jspx_page_context))
         return;
       out.write("\r\n");
-      out.write("                        \r\n");
+      out.write("                        </div>\r\n");
       out.write("                    </div>\r\n");
       out.write("    \r\n");
       out.write("                </div>\r\n");
@@ -202,8 +200,11 @@ public final class TECHWORD_jsp extends org.apache.jasper.runtime.HttpJspBase
     if (_jspx_eval_c_if_0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
       do {
         out.write("\r\n");
-        out.write("                            <li><a id=\"out\" href=\"Login.jsp\">Đăng xuất</a></li>\r\n");
-        out.write("                        ");
+        out.write("                                <a id=\"username\">Hello ");
+        out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${sessionScope.acc.name}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+        out.write("</a>\r\n");
+        out.write("                                <a id=\"out\" href=\"Login.jsp\">Đăng xuất</a>\r\n");
+        out.write("                                ");
         int evalDoAfterBody = _jspx_th_c_if_0.doAfterBody();
         if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
           break;
@@ -230,8 +231,8 @@ public final class TECHWORD_jsp extends org.apache.jasper.runtime.HttpJspBase
     if (_jspx_eval_c_if_1 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
       do {
         out.write("\r\n");
-        out.write("                            <li><a id=\"out\" href=\"Login.jsp\">Đăng nhập</a></li>\r\n");
-        out.write("                        ");
+        out.write("                                <a id=\"out\" href=\"Login.jsp\">Đăng nhập</a>\r\n");
+        out.write("                                ");
         int evalDoAfterBody = _jspx_th_c_if_1.doAfterBody();
         if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
           break;

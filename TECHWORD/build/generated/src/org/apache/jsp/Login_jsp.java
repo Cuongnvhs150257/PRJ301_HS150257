@@ -121,7 +121,6 @@ public final class Login_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                            <a class=\"a2\" href=\"register.jsp\">Tạo Tài Khoản Mới</a>\r\n");
       out.write("\r\n");
       out.write("                        </div>\r\n");
-      out.write("                    </form>\r\n");
       out.write("                </div>\r\n");
       out.write("                <div class=\"footer\">\r\n");
       out.write("                    <div class=\"about us\">\r\n");
@@ -130,7 +129,9 @@ public final class Login_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                        <h5>Chủ Quản: <a href=\"https://www.facebook.com/nguyenvan.cuong.35762241\">Nguyễn Văn Cương</a></h5>\r\n");
       out.write("                    </div>\r\n");
       out.write("                </div>\r\n");
-      out.write("            </form>\r\n");
+      out.write("            </div>\r\n");
+      out.write("        </div>\r\n");
+      out.write("      </form>\r\n");
       out.write("</body>\r\n");
       out.write("</html>");
     } catch (Throwable t) {

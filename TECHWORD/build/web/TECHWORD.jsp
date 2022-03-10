@@ -6,7 +6,7 @@
         <link rel="icon" href="image/icon1.png">
         <title>TECHWORD | TECHWORD.VN</title>
         <meta charset="utf-8">
-        <link href="stytlehome.css" rel="stylesheet" type="text/css"/>
+        <link href="stylehomepage.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
         <div>
@@ -31,11 +31,11 @@
                     </div>
                     <div class="user">
                         <a href=""><img src="icon/user1.png" alt=""></a>
-                       <p>${user}</p>
+                       
                         <div class="logout">
                             <c:if test="${sessionScope.acc != null}">
                                 <a id="username">Hello ${sessionScope.acc.name}</a>
-                                <a id="out" href="TECHWORD.jsp">Đăng xuất</a>
+                                <a id="out" href="LogoutServlet">Đăng xuất</a>
                                 </c:if>
 
                             <c:if test="${sessionScope.acc == null}">

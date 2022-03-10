@@ -39,7 +39,6 @@
     width: 20px;
     height: auto;
 }
-
 .content{
     width: 1000px;
     height: auto;
@@ -73,41 +72,6 @@
     font-size: 18px;
     font-family: 'Times New Roman', Times, serif;
 }
-.right{
-    width: 80%;
-    height: auto;
-    margin: 0 auto;
-}
-.right p{
-    font-size: 25px;
-    text-align: center;
-    font-weight: bold;
-    font-family:'Times New Roman', Times, serif;
-    color: rgb(12, 122, 248);
-}
-.choice{
-    margin-top: 20px;
-    width: 800px;
-    height: auto;
-}
-.item{
-    text-align: center;
-    position: relative;
-    
-}
-.item img{
-    width: 500px;
-    height: auto;
-    border-radius: 10px;
-    margin-top: 30px;
-}
-
-h2{
-    position: absolute;
-    color: rgb(12, 122, 248);
-    top: 250px;
-    left: 180px;
-}
 .footer{
     width: 800px;
     height: 180px;
@@ -117,6 +81,48 @@ h2{
 .footer h3, h4, h5, a{
     color: rgb(12, 122, 248);
     text-decoration: none;
+}
+.right{
+    width: 80%;
+    height: auto;
+}
+
+.p1{
+    text-align: center;
+    font-size: 23px;
+    font-weight: bold;
+    color: rgb(12, 122, 248);
+}
+
+.right table{
+    width: 600px;
+    height: 50px;
+    margin-top: 30px;
+    margin-left: 100px;
+    background-color: rgb(12, 122, 248);
+}
+
+.a1, .a2, .a3{
+    width: 597px;
+    height: 200px;
+    margin-left: 100px;
+    background-color: white;
+    border: 1px solid rgb(12, 122, 248);
+
+}
+
+.right table tr th a{
+    display: inline-block;
+    color: white;
+    font-size: 20px;
+    padding-top: 10px;
+    float: left;
+
+}
+.a1 table{
+    width: 100px;
+    height: 50px;
+    background-color: black;
 }
 .user {
     width: 30%;
@@ -128,20 +134,10 @@ h2{
     width: 40px;
     height: auto;
 }
-.user p{
-    width: 30%;
-    height: 30px;
-    margin-left: 10px;
-    margin-top: 15px;
-    font-size: 20px;
-    font-weight: bold;
-    color: #e7e7e7;
-}
 #username{
     width: 50%;
     height: 30px;
-    margin-left: 10px;
-    margin-top: 15px;
+    margin-left: 20px;
     font-size: 20px;
     font-weight: bold;
     color: #e7e7e7;
@@ -149,9 +145,9 @@ h2{
 #out{
     width: 30%;
     height: 30px;
-    margin-top: 15px;
     font-size: 18px;
     font-weight: bold;
+    margin-left: 15px;
     color: #e7e7e7;
     
 }
