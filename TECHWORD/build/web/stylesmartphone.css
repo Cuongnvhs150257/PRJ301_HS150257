@@ -123,6 +123,65 @@
     color: #e7e7e7;
     
 }
+.right table{
+    width: 753px;
+    height: 50px;
+    margin-top: 25px;
+    margin-left: 30px;
+    background-color: rgb(12, 122, 248);
+}
+
+.a1{
+    width: 750px;
+    height: 150px;
+    margin-left: 30px;
+    background-color: white;
+    border: 1px solid rgb(12, 122, 248);
+    display: flex;
+
+}
+
+.right table tr th a{
+    display: inline-block;
+    color: white;
+    font-size: 18px;
+    padding-top: 10px;
+    padding-left: 10px;
+    float: left;
+
+}
+.a1 table{
+    width: 100px;
+    height: 50px;
+    background-color: black;
+}
+.imgpage{
+    width: 44%;
+    height: auto;
+}
+.imgpage a img{
+    width: 100%;
+    height: auto;
+}
+.describe{
+    width: 80%;
+    height: auto;
+}
+.describe a p{
+    font-size: 13px;
+    color: black;
+    font-family: system-ui;
+    text-align: left;
+    padding-left: 8px;
+}
+.paging{
+    margin-left: 30px;
+    margin-top: 10px;
+}
+.paging a {
+    float: left;
+    padding-left: 10px;
+}
 
 
 

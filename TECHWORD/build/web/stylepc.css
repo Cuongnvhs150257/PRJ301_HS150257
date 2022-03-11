@@ -168,10 +168,21 @@
     height: auto;
 }
 .describe a p{
-    font-size: 15px;
+    font-size: 13px;
     color: black;
     font-family: system-ui;
+    text-align: left;
+    padding-left: 8px;
 }
+.paging{
+    margin-left: 30px;
+    margin-top: 10px;
+}
+.paging a {
+    float: left;
+    padding-left: 10px;
+}
+
 
 
 

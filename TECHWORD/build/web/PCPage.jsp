@@ -11,7 +11,7 @@
         <link rel="icon" href="image/icon1.png">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>PCPage || TECHWORD.VN</title>
-        <link href="stylepcpage.css" rel="stylesheet" type="text/css"/>
+        <link href="stylepc.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
         <div>
@@ -65,6 +65,8 @@
                     </div>
                     <div class="right">
                         <p>Tin Tức PC_Windows Mới Nhất Hiện Nay</p>
+                        <div>
+
                         <table>
                             <tr>
                                 <th><a href="TECHWORD.jsp">Windows 11 chính thức ra mắt công chúng</a></th>
@@ -169,10 +171,12 @@
                                 </a>
                             </div>
                         </div>
-                        
-                        <c:forEach begin="1" end="8" var="i">
-                            <a href="ListD?index=${i}">${i}</a>
-                        </c:forEach>
+                        </div>
+                            <c:forEach begin="1" end="8" var="i">
+                                <div class="paging">
+                                <a href="ListD?index=${i}">${i}</a>
+                                </div>
+                            </c:forEach>
                     </div>  
         </div>
         <div class="footer">
