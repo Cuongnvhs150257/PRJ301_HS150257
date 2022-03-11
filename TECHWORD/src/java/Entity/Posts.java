@@ -12,27 +12,29 @@ import java.util.Date;
  * @author s
  */
 public class Posts {
-    private int id;
+    private int Pid;
     private String Pname;
-    private Date Pdate;
-    private int Account_ID;
+    private String Title;
+    private String Describe;
+    private String ImgLink;
 
     public Posts() {
     }
 
-    public Posts(int id, String Pname, Date Pdate, int Account_ID) {
-        this.id = id;
+    public Posts(int Pid, String Pname, String Title, String Describe, String ImgLink) {
+        this.Pid = Pid;
         this.Pname = Pname;
-        this.Pdate = Pdate;
-        this.Account_ID = Account_ID;
+        this.Title = Title;
+        this.Describe = Describe;
+        this.ImgLink = ImgLink;
     }
 
-    public int getId() {
-        return id;
+    public int getPid() {
+        return Pid;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setPid(int Pid) {
+        this.Pid = Pid;
     }
 
     public String getPname() {
@@ -43,25 +45,33 @@ public class Posts {
         this.Pname = Pname;
     }
 
-    public Date getPdate() {
-        return Pdate;
+    public String getTitle() {
+        return Title;
     }
 
-    public void setPdate(Date Pdate) {
-        this.Pdate = Pdate;
+    public void setTitle(String Title) {
+        this.Title = Title;
     }
 
-    public int getAccount_ID() {
-        return Account_ID;
+    public String getDescribe() {
+        return Describe;
     }
 
-    public void setAccount_ID(int Account_ID) {
-        this.Account_ID = Account_ID;
+    public void setDescribe(String Describe) {
+        this.Describe = Describe;
+    }
+
+    public String getImgLink() {
+        return ImgLink;
+    }
+
+    public void setImgLink(String ImgLink) {
+        this.ImgLink = ImgLink;
     }
 
     @Override
     public String toString() {
-        return "Posts{" + "id=" + id + ", Pname=" + Pname + ", Pdate=" + Pdate + ", Account_ID=" + Account_ID + '}';
+        return "Posts{" + "Pid=" + Pid + ", Pname=" + Pname + ", Title=" + Title + ", Describe=" + Describe + ", ImgLink=" + ImgLink + '}';
     }
     
     

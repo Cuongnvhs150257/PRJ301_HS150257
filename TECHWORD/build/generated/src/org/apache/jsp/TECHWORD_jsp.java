@@ -59,7 +59,7 @@ public final class TECHWORD_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        <link rel=\"icon\" href=\"image/icon1.png\">\r\n");
       out.write("        <title>TECHWORD | TECHWORD.VN</title>\r\n");
       out.write("        <meta charset=\"utf-8\">\r\n");
-      out.write("        <link href=\"stytlehome.css\" rel=\"stylesheet\" type=\"text/css\"/>\r\n");
+      out.write("        <link href=\"stylehomepage.css\" rel=\"stylesheet\" type=\"text/css\"/>\r\n");
       out.write("    </head>\r\n");
       out.write("    <body>\r\n");
       out.write("        <div>\r\n");
@@ -203,7 +203,7 @@ public final class TECHWORD_jsp extends org.apache.jasper.runtime.HttpJspBase
         out.write("                                <a id=\"username\">Hello ");
         out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${sessionScope.acc.name}", java.lang.String.class, (PageContext)_jspx_page_context, null));
         out.write("</a>\r\n");
-        out.write("                                <a id=\"out\" href=\"Login.jsp\">Đăng xuất</a>\r\n");
+        out.write("                                <a id=\"out\" href=\"LogoutServlet\">Đăng xuất</a>\r\n");
         out.write("                                ");
         int evalDoAfterBody = _jspx_th_c_if_0.doAfterBody();
         if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)

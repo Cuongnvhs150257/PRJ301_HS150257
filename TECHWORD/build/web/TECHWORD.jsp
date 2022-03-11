@@ -62,16 +62,22 @@
                         <p>Chọn Danh Mục Tin Tức Công Nghệ</p>
                         <div class="choice">
                             <div class="item item1">
+                                <a href="PCPage.jsp">
                                 <img id="img" src="image/pc1.jpg" onclick="changeImg()">
                                 <h2>PC_Windows</h2>
+                                 </a>
                             </div>
                             <div class="item item2">
+                                <a href="SmartphonePage.jsp">
                                 <img id="img2" src="image/phone1.jpg" onclick="changeImg2()">
                                 <h2>Smartphone</h2>
+                                </a>
                             </div>
                             <div class="item item3">
+                                <a href="SmartwatchPage.jsp">
                                 <img id="img3" src="image/smartwatch1.jpg" onclick="changeImg3()">
                                 <h2>Smartwatch</h2>
+                                </a>
                             </div>
                             <script>
                                 var index = 1;

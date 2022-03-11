@@ -95,7 +95,7 @@
     position: relative;
     
 }
-.item img{
+.item a img{
     width: 500px;
     height: auto;
     border-radius: 10px;

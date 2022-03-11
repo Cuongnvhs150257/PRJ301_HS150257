@@ -1,12 +1,17 @@
+<%-- 
+    Document   : SmartwatchPage
+    Created on : Mar 11, 2022, 1:24:02 PM
+    Author     : s
+--%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
         <link rel="icon" href="image/icon1.png">
-        <title>TECHWORD | TECHWORD.VN</title>
-        <meta charset="utf-8">
-        <link href="stylehomepage.css" rel="stylesheet" type="text/css"/>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>SmartWatchPage || TECHWORD.VN</title>
+        <link href="stylesmartwatch.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
         <div>
@@ -59,62 +64,8 @@
                         </ul>
                     </div>
                     <div class="right">
-                        <p>Chọn Danh Mục Tin Tức Công Nghệ</p>
-                        <div class="choice">
-                            <div class="item item1">
-                                <a href="PCPage.jsp">
-                                <img id="img" src="image/pc1.jpg" onclick="changeImg()">
-                                <h2>PC_Windows</h2>
-                                 </a>
-                            </div>
-                            <div class="item item2">
-                                <a href="SmartphonePage.jsp">
-                                <img id="img2" src="image/phone1.jpg" onclick="changeImg2()">
-                                <h2>Smartphone</h2>
-                                </a>
-                            </div>
-                            <div class="item item3">
-                                <a href="SmartwatchPage.jsp">
-                                <img id="img3" src="image/smartwatch1.jpg" onclick="changeImg3()">
-                                <h2>Smartwatch</h2>
-                                </a>
-                            </div>
-                            <script>
-                                var index = 1;
-                                changeImg = function(){
-                                    var imgs = ["image/pc1.jpg","image/pc2.jpg","image/pc3.jpg"];
-                                    document.getElementById('img').src=imgs[index];
-                                    index++;
-                                    if(index==3){
-                                        index=0;
-                                    }
-                                }
-                                setInterval(changeImg,3000);
-
-                                var index2 = 1;
-                                changeImg2 = function(){
-                                    var imgs2 = ["image/phone1.jpg","image/phone2.jpg","image/phone3.jpg"];
-                                    document.getElementById('img2').src=imgs2[index2];
-                                    index2++;
-                                    if(index2==3){
-                                        index2=0;
-                                    }
-                                }
-                                setInterval(changeImg2,3000);
-
-                                var index3 = 1;
-                                changeImg3 = function(){
-                                    var imgs3 = ["image/smartwatch1.jpg","image/smartwatch2.jpg","image/smartwatch3.jpg"];
-                                    document.getElementById('img3').src=imgs3[index3];
-                                    index3++;
-                                    if(index3==3){
-                                        index3=0;
-                                    }
-                                }
-                                setInterval(changeImg3,3000);
-
-                            </script>
-                        </div>
+                        <p>Tin Tức Smartwatch Mới Nhất Hiện Nay</p>
+                    
                     </div>  
         </div>
         <div class="footer">
