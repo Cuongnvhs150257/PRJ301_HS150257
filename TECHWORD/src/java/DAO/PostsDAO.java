@@ -99,11 +99,30 @@ public class PostsDAO {
         return null;
     }
     
+    public Posts getDetail(int id){
+        try {
+            String sql = "select * from Postt\n" +
+                         "where Pid = ?";
+            conn = new BaseDAO().BaseDao();
+            ps = conn.prepareStatement(sql);
+            ps.setInt(1, id);
+            rs = ps.executeQuery();
+            while(rs.next()){
+                Posts p = new Posts (rs.getInt(1),rs.getString(2),rs.getString(3),rs.getString(4),rs.getString(5),rs.getInt(6));
+                        return p;
+            }
+
+        } catch (Exception e) {
+        }
+        
+        return null;
+    } 
+  
+    
     public static void main(String[] args) {
         PostsDAO dao = new PostsDAO();
-        List<Posts> list = dao.pagingPost(1);
-        for(Posts o : list){
-            System.out.println(o);
-        }
+        Posts a = dao.getDetail(1);
+        System.out.println(a);
+        
     }
 }

@@ -65,23 +65,26 @@
                         </ul>
                     </div>
                     <div class="right">
+                    
                         <p>Tin Tức PC_Windows Mới Nhất Hiện Nay</p>
-                        <div>
+                        
+                        <div class="newspage">
+                        
 
                             <table>
                                 <tr>
-                                    <th><a href="TECHWORD.jsp">${a.newPost.title}</a></th>
+                                    <th><a href="DetailControl?id=${a.newPost.pid}">${a.newPost.title}</a></th>
                             </tr>
                         </table>
 
                         <div class="a1">
                             <div class="imgpage">
-                                <a href="#">
+                                <a href="ReadPage.jsp">
                                     <img src="${a.newPost.imgLink}" alt="">
                                 </a>
                             </div>
                             <div class="describe">
-                                <a href="#">
+                                <a href="ReadPage.jsp">
                                     <p>${a.newPost.describe}</p>
                                 </a>
                             </div>
@@ -91,23 +94,24 @@
                         <c:forEach items="${a.top5}" var="i">
                             <table>
                                 <tr>
-                                    <th><a href="TECHWORD.jsp">${i.title}</a></th>
+                                    <th><a href="DetailControl?id=${i.pid}">${i.title}</a></th>
                                 </tr>
                             </table>
                             <div class="a1">
                                 <div class="imgpage">
-                                    <a href="#">
+                                    <a href="ReadPage.jsp">
                                         <img src="${i.imgLink}" alt="">
                                     </a>
                                 </div>
                                 <div class="describe">
-                                    <a href="#">
+                                    <a href="ReadPage.jsp">
                                         <p>${i.describe}</p>
                                     </a>
                                 </div>
                             </div>
    
                         </c:forEach>
+                              
                     </div>
                     <c:forEach begin="1" end="8" var="i">
                         <div class="paging">

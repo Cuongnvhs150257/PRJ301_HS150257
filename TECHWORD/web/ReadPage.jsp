@@ -1,8 +1,9 @@
 <%-- 
-    Document   : PCPage
-    Created on : Mar 11, 2022, 1:22:03 PM
+    Document   : ReadPage
+    Created on : Mar 12, 2022, 8:56:06 PM
     Author     : s
 --%>
+
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -11,8 +12,8 @@
         <jsp:useBean id="a" class="DAO.PostsDAO" scope="request"></jsp:useBean>
         <link rel="icon" href="image/icon1.png">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>PCPage || TECHWORD.VN</title>
-        <link href="stylepc.css" rel="stylesheet" type="text/css"/>
+        <title>Read || TECHWORD.VN</title>
+        <link href="styleread.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
         <div>
@@ -65,67 +66,29 @@
                         </ul>
                     </div>
                     <div class="right">
-                    
-                        <p>Tin Tức PC_Windows Mới Nhất Hiện Nay</p>
-                        
-                        <div class="newspage">
-                        
 
-                            <table>
-                                <tr>
-                                    <th><a href="DetailControl?id=${a.newPost.pid}">${a.newPost.title}</a></th>
-                            </tr>
-                        </table>
-
-                        <div class="a1">
-                            <div class="imgpage">
-                                <a href="ReadPage.jsp">
-                                    <img src="${a.newPost.imgLink}" alt="">
-                                </a>
-                            </div>
-                            <div class="describe">
-                                <a href="ReadPage.jsp">
-                                    <p>${a.newPost.describe}</p>
-                                </a>
-                            </div>
+                        <div class="top">
+                            <h2>${Detail.title}</h2>
+                            <p> Tác giả: ${Detail.pname}</p>
                         </div>
-
-
-                        <c:forEach items="${a.top5}" var="i">
-                            <table>
-                                <tr>
-                                    <th><a href="DetailControl?id=${i.pid}">${i.title}</a></th>
-                                </tr>
-                            </table>
-                            <div class="a1">
-                                <div class="imgpage">
-                                    <a href="ReadPage.jsp">
-                                        <img src="${i.imgLink}" alt="">
-                                    </a>
-                                </div>
-                                <div class="describe">
-                                    <a href="ReadPage.jsp">
-                                        <p>${i.describe}</p>
-                                    </a>
-                                </div>
-                            </div>
-   
-                        </c:forEach>
-                              
+                        <div class="center">
+                            <img src="icon/user1.png" alt="Anh 1">
+                            <p>${Detail.pname}</p>
+                        </div>
+                        
+                        <div class="text">
+                            <img src="${Detail.imgLink}" alt="Anh 1">
+                            <p>${Detail.describe}</p>
                     </div>
-                    <c:forEach begin="1" end="8" var="i">
-                        <div class="paging">
-                            <a href="ListD?index=${i}">${i}</a>
-                        </div>
-                    </c:forEach>
-                </div>  
-        </div>
+
+                </div>
+            </div>
         <div class="footer">
             <div class="about us">
                 <h3>Về Chúng Tôi</h3>
                 <h4>Đây là trang tin công nghệ TECHWORD thuộc dự án PRJ301 - ĐH FPT</h4>
                 <h5>Chủ Quản: <a href="https://www.facebook.com/nguyenvan.cuong.35762241">Nguyễn Văn Cương</a></h5>
             </div>
-        </div>
+        </div>    
     </body>
 </html>
