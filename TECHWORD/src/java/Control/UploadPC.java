@@ -50,9 +50,12 @@ public class UploadPC extends HttpServlet {
             }
             
             List<Posts> list = dao.pagingPost(index);
+            
+            
+            
             request.setAttribute("posts", list);
             request.setAttribute("endP", endPage);
-            request.getRequestDispatcher("PCPage.jsp").forward(request, response);
+            request.getRequestDispatcher("Up.jsp").forward(request, response);
         
         } catch (Exception e) {
         }

@@ -17,16 +17,18 @@ public class Posts {
     private String Title;
     private String Describe;
     private String ImgLink;
+    private int Category;
 
     public Posts() {
     }
 
-    public Posts(int Pid, String Pname, String Title, String Describe, String ImgLink) {
+    public Posts(int Pid, String Pname, String Title, String Describe, String ImgLink, int Category) {
         this.Pid = Pid;
         this.Pname = Pname;
         this.Title = Title;
         this.Describe = Describe;
         this.ImgLink = ImgLink;
+        this.Category = Category;
     }
 
     public int getPid() {
@@ -69,11 +71,23 @@ public class Posts {
         this.ImgLink = ImgLink;
     }
 
+    public int getCategory() {
+        return Category;
+    }
+
+    public void setCategory(int Category) {
+        this.Category = Category;
+    }
+
     @Override
     public String toString() {
-        return "Posts{" + "Pid=" + Pid + ", Pname=" + Pname + ", Title=" + Title + ", Describe=" + Describe + ", ImgLink=" + ImgLink + '}';
+        return "Posts{" + "Pid=" + Pid + ", Pname=" + Pname + ", Title=" + Title + ", Describe=" + Describe + ", ImgLink=" + ImgLink + ", Category=" + Category + '}';
     }
     
+    
+
+    
+
     
     
 }

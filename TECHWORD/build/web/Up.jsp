@@ -3,6 +3,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <jsp:useBean id="a" class="DAO.PostsDAO" scope="request"></jsp:useBean>
     <link rel="icon" href="image/icon1.png">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -61,38 +62,24 @@
                 <div class="right">
 
                     <p class="p1">Chọn Danh Mục Đăng Tin</p>
-                    
-                    <table>
+
+                    <table border="1px solid black">
                         <tr>
-                            <th><a href="TECHWORD.jsp">PC_Windows</a></th>
+                            <th>ID</th>
+                            <th>Name</th>
                         </tr>
-                    </table>
 
-                    <div class="a1">
-                        
-                    </div>
-
-                    </table>
-                       
-                    <table>
                         <tr>
-                            <th><a href="TECHWORD.jsp">Smartphone</a></th>
+                            <td>${a.newPost.pid}</td>
+                            <td>${a.newPost.pname}</td>
                         </tr>
-                    </table>
-                    <div class="a1">
-                        
-                    </div>
 
                     </table>
+                    <c:forEach begin="1" end="${endP}" var="i">
+                        <a href="ListD?index=${i}">${i}</a>
+                    </c:forEach>
 
-                    <table>
-                        <tr>
-                            <th><a href="TECHWORD.jsp">Smartwatch</a></th>
-                        </tr>
-                    </table>
-                    <div class="a1">
-                        
-                    </div>
+
 
                 </div>  
     </div>

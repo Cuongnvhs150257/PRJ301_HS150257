@@ -8,6 +8,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <jsp:useBean id="a" class="DAO.PostsDAO" scope="request"></jsp:useBean>
         <link rel="icon" href="image/icon1.png">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>PCPage || TECHWORD.VN</title>
@@ -67,117 +68,53 @@
                         <p>Tin Tức PC_Windows Mới Nhất Hiện Nay</p>
                         <div>
 
-                        <table>
-                            <tr>
-                                <th><a href="TECHWORD.jsp">Windows 11 chính thức ra mắt công chúng</a></th>
+                            <table>
+                                <tr>
+                                    <th><a href="TECHWORD.jsp">${a.newPost.title}</a></th>
                             </tr>
                         </table>
 
                         <div class="a1">
                             <div class="imgpage">
                                 <a href="#">
-                                    <img src="image/pc1.jpg" alt="">
+                                    <img src="${a.newPost.imgLink}" alt="">
                                 </a>
                             </div>
                             <div class="describe">
                                 <a href="#">
-                                    <p>Nếu bạn đang muốn thêm một chút màu sắc và hương vị cho PC, laptop chạy Windows 11 của mình thì mới đây,
-                                        Microsoft vừa phát hành một theme hoàn toàn mới cho Windows 11 được gọi là Pantone Color of the Year 2022. 
-                                        Theme này có thể hoạt động cho cả Windows 10 lẫn Windows 11 và đặc biệt, nó hoàn toàn miễn phí trên Microsoft Store.</p>
+                                    <p>${a.newPost.describe}</p>
                                 </a>
                             </div>
                         </div>
 
-                        </table>
 
-                        <table>
-                            <tr>
-                                <th><a href="TECHWORD.jsp">Sau nửa năm ra mắt, Windows 11 chiếm 20% số PC toàn cầu</a></th>
-                            </tr>
-                        </table>
-                        <div class="a1">
-                            <div class="imgpage">
-                                <a href="#">
-                                    <img src="image/pc1.jpg" alt="">
-                                </a>
-                            </div>
-                            <div class="describe">
-                                <a href="#">
-                                    <p>Nếu bạn đang muốn thêm một chút màu sắc và hương vị cho PC, laptop chạy Windows 11 của mình thì mới đây,
-                                        Microsoft vừa phát hành một theme hoàn toàn mới cho Windows 11 được gọi là Pantone Color of the Year 2022. 
-                                        Theme này có thể hoạt động cho cả Windows 10 lẫn Windows 11 và đặc biệt, nó hoàn toàn miễn phí trên Microsoft Store.</p>
-                                </a>
-                            </div>
-                        </div>
-
-                        </table>
-
-                        <table>
-                            <tr>
-                                <th><a href="TECHWORD.jsp">Lỗi Windows 11 khiến ai nấy cũng phải lo sợ</a></th>
-                            </tr>
-                        </table>
-                        <div class="a1">
-                            <div class="imgpage">
-                                <a href="#">
-                                    <img src="image/pc1.jpg" alt="">
-                                </a>
-                            </div>
-                            <div class="describe">
-                                <a href="#">
-                                    <p>Nếu bạn đang muốn thêm một chút màu sắc và hương vị cho PC, laptop chạy Windows 11 của mình thì mới đây,
-                                        Microsoft vừa phát hành một theme hoàn toàn mới cho Windows 11 được gọi là Pantone Color of the Year 2022. 
-                                        Theme này có thể hoạt động cho cả Windows 10 lẫn Windows 11 và đặc biệt, nó hoàn toàn miễn phí trên Microsoft Store.</p>
-                                </a>
-                            </div>
-                        </div>
-                        
-                        <table>
-                            <tr>
-                                <th><a href="TECHWORD.jsp">Lỗi Windows 11 khiến ai nấy cũng phải lo sợ</a></th>
-                            </tr>
-                        </table>
-                        <div class="a1">
-                             <div class="imgpage">
-                                <a href="#">
-                                    <img src="image/pc1.jpg" alt="">
-                                </a>
-                            </div>
-                            <div class="describe">
-                                <a href="#">
-                                    <p>Nếu bạn đang muốn thêm một chút màu sắc và hương vị cho PC, laptop chạy Windows 11 của mình thì mới đây,
-                                        Microsoft vừa phát hành một theme hoàn toàn mới cho Windows 11 được gọi là Pantone Color of the Year 2022. 
-                                        Theme này có thể hoạt động cho cả Windows 10 lẫn Windows 11 và đặc biệt, nó hoàn toàn miễn phí trên Microsoft Store.</p>
-                                </a>
-                            </div>
-                        </div>
-                        
-                        <table>
-                            <tr>
-                                <th><a href="TECHWORD.jsp">Lỗi Windows 11 khiến ai nấy cũng phải lo sợ</a></th>
-                            </tr>
-                        </table>
-                        <div class="a1">
-                            <div class="imgpage">
-                                <a href="#">
-                                    <img src="image/pc1.jpg" alt="">
-                                </a>
-                            </div>
-                            <div class="describe">
-                                <a href="#">
-                                    <p>Nếu bạn đang muốn thêm một chút màu sắc và hương vị cho PC, laptop chạy Windows 11 của mình thì mới đây,
-                                        Microsoft vừa phát hành một theme hoàn toàn mới cho Windows 11 được gọi là Pantone Color of the Year 2022. 
-                                        Theme này có thể hoạt động cho cả Windows 10 lẫn Windows 11 và đặc biệt, nó hoàn toàn miễn phí trên Microsoft Store.</p>
-                                </a>
-                            </div>
-                        </div>
-                        </div>
-                            <c:forEach begin="1" end="8" var="i">
-                                <div class="paging">
-                                <a href="ListD?index=${i}">${i}</a>
+                        <c:forEach items="${a.top5}" var="i">
+                            <table>
+                                <tr>
+                                    <th><a href="TECHWORD.jsp">${i.title}</a></th>
+                                </tr>
+                            </table>
+                            <div class="a1">
+                                <div class="imgpage">
+                                    <a href="#">
+                                        <img src="${i.imgLink}" alt="">
+                                    </a>
                                 </div>
-                            </c:forEach>
-                    </div>  
+                                <div class="describe">
+                                    <a href="#">
+                                        <p>${i.describe}</p>
+                                    </a>
+                                </div>
+                            </div>
+   
+                        </c:forEach>
+                    </div>
+                    <c:forEach begin="1" end="8" var="i">
+                        <div class="paging">
+                            <a href="ListD?index=${i}">${i}</a>
+                        </div>
+                    </c:forEach>
+                </div>  
         </div>
         <div class="footer">
             <div class="about us">
