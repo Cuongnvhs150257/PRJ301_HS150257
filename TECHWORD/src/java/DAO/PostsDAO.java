@@ -118,11 +118,29 @@ public class PostsDAO {
         return null;
     } 
   
+    public void addnews(String Pname, String title, String describe, String lingimg, int category){
+ 
+        try {
+            String sql="INSERT INTO Postt([Pname],[Title],[Describe],[ImgLink],[Category]) VALUES(?,?,?,?,?)";
+            
+            conn = new BaseDAO().BaseDao();
+            ps = conn.prepareStatement(sql);
+            ps.setString(1, Pname);
+            ps.setString(2, title);
+            ps.setString(3, describe);
+            ps.setString(4, lingimg);
+            ps.setInt(5, category);
+            ps.executeUpdate();
+            
+        } catch (Exception e) {
+        }
+    }
+    
     
     public static void main(String[] args) {
         PostsDAO dao = new PostsDAO();
-        Posts a = dao.getDetail(1);
-        System.out.println(a);
+        //dao.addnews("Mong la chay dc", "aafasfnsndnsddnsjfsnfsjsfn", "https://photo.techrum.vn/images/2022/03/12/D-an-mi1393d9328694067e.jpg");
+        
         
     }
 }

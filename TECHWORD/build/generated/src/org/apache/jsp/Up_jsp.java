@@ -12,7 +12,6 @@ public final class Up_jsp extends org.apache.jasper.runtime.HttpJspBase
   private static java.util.List<String> _jspx_dependants;
 
   private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_c_if_test;
-  private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_c_forEach_var_end_begin;
 
   private org.glassfish.jsp.api.ResourceInjector _jspx_resourceInjector;
 
@@ -22,12 +21,10 @@ public final class Up_jsp extends org.apache.jasper.runtime.HttpJspBase
 
   public void _jspInit() {
     _jspx_tagPool_c_if_test = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
-    _jspx_tagPool_c_forEach_var_end_begin = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
   }
 
   public void _jspDestroy() {
     _jspx_tagPool_c_if_test.release();
-    _jspx_tagPool_c_forEach_var_end_begin.release();
   }
 
   public void _jspService(HttpServletRequest request, HttpServletResponse response)
@@ -74,7 +71,7 @@ public final class Up_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\r\n");
       out.write("    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n");
       out.write("    <title>Đăng Tin || TECHWORD.VN</title>\r\n");
-      out.write("    <link rel=\"stylesheet\" href=\"styleup2.css\">\r\n");
+      out.write("    <link rel=\"stylesheet\" href=\"styleup3.css\">\r\n");
       out.write("</head>\r\n");
       out.write("<body>\r\n");
       out.write("    <div>\r\n");
@@ -126,32 +123,14 @@ public final class Up_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                    </ul>\r\n");
       out.write("                </div>\r\n");
       out.write("                <div class=\"right\">\r\n");
-      out.write("\r\n");
-      out.write("                    <p class=\"p1\">Chọn Danh Mục Đăng Tin</p>\r\n");
-      out.write("\r\n");
-      out.write("                    <table border=\"1px solid black\">\r\n");
-      out.write("                        <tr>\r\n");
-      out.write("                            <th>ID</th>\r\n");
-      out.write("                            <th>Name</th>\r\n");
-      out.write("                        </tr>\r\n");
-      out.write("\r\n");
-      out.write("                        <tr>\r\n");
-      out.write("                            <td>");
-      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${a.newPost.pid}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-      out.write("</td>\r\n");
-      out.write("                            <td>");
-      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${a.newPost.pname}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-      out.write("</td>\r\n");
-      out.write("                        </tr>\r\n");
-      out.write("\r\n");
-      out.write("                    </table>\r\n");
-      out.write("                    ");
-      if (_jspx_meth_c_forEach_0(_jspx_page_context))
+      out.write("                ");
+      if (_jspx_meth_c_if_2(_jspx_page_context))
         return;
       out.write("\r\n");
-      out.write("\r\n");
-      out.write("\r\n");
-      out.write("\r\n");
+      out.write("                ");
+      if (_jspx_meth_c_if_3(_jspx_page_context))
+        return;
+      out.write("                         \r\n");
       out.write("                </div>  \r\n");
       out.write("    </div>\r\n");
       out.write("    <div class=\"footer\">\r\n");
@@ -235,46 +214,135 @@ public final class Up_jsp extends org.apache.jasper.runtime.HttpJspBase
     return false;
   }
 
-  private boolean _jspx_meth_c_forEach_0(PageContext _jspx_page_context)
+  private boolean _jspx_meth_c_if_2(PageContext _jspx_page_context)
           throws Throwable {
     PageContext pageContext = _jspx_page_context;
     JspWriter out = _jspx_page_context.getOut();
-    //  c:forEach
-    org.apache.taglibs.standard.tag.rt.core.ForEachTag _jspx_th_c_forEach_0 = (org.apache.taglibs.standard.tag.rt.core.ForEachTag) _jspx_tagPool_c_forEach_var_end_begin.get(org.apache.taglibs.standard.tag.rt.core.ForEachTag.class);
-    _jspx_th_c_forEach_0.setPageContext(_jspx_page_context);
-    _jspx_th_c_forEach_0.setParent(null);
-    _jspx_th_c_forEach_0.setBegin(1);
-    _jspx_th_c_forEach_0.setEnd(((java.lang.Integer) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${endP}", java.lang.Integer.class, (PageContext)_jspx_page_context, null)).intValue());
-    _jspx_th_c_forEach_0.setVar("i");
-    int[] _jspx_push_body_count_c_forEach_0 = new int[] { 0 };
-    try {
-      int _jspx_eval_c_forEach_0 = _jspx_th_c_forEach_0.doStartTag();
-      if (_jspx_eval_c_forEach_0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
-        do {
-          out.write("\r\n");
-          out.write("                        <a href=\"ListD?index=");
-          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${i}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-          out.write('"');
-          out.write('>');
-          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${i}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-          out.write("</a>\r\n");
-          out.write("                    ");
-          int evalDoAfterBody = _jspx_th_c_forEach_0.doAfterBody();
-          if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
-            break;
-        } while (true);
-      }
-      if (_jspx_th_c_forEach_0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
-        return true;
-      }
-    } catch (Throwable _jspx_exception) {
-      while (_jspx_push_body_count_c_forEach_0[0]-- > 0)
-        out = _jspx_page_context.popBody();
-      _jspx_th_c_forEach_0.doCatch(_jspx_exception);
-    } finally {
-      _jspx_th_c_forEach_0.doFinally();
-      _jspx_tagPool_c_forEach_var_end_begin.reuse(_jspx_th_c_forEach_0);
+    //  c:if
+    org.apache.taglibs.standard.tag.rt.core.IfTag _jspx_th_c_if_2 = (org.apache.taglibs.standard.tag.rt.core.IfTag) _jspx_tagPool_c_if_test.get(org.apache.taglibs.standard.tag.rt.core.IfTag.class);
+    _jspx_th_c_if_2.setPageContext(_jspx_page_context);
+    _jspx_th_c_if_2.setParent(null);
+    _jspx_th_c_if_2.setTest(((java.lang.Boolean) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${sessionScope.acc == null}", java.lang.Boolean.class, (PageContext)_jspx_page_context, null)).booleanValue());
+    int _jspx_eval_c_if_2 = _jspx_th_c_if_2.doStartTag();
+    if (_jspx_eval_c_if_2 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
+      do {
+        out.write("\r\n");
+        out.write("                    <div class=\"warning\">\r\n");
+        out.write("                        <h1>Hãy đăng nhập tài khoản để có thể đăng tin</h1>\r\n");
+        out.write("\r\n");
+        out.write("                        <img src=\"image/warning1.png\" alt=\"\"/>\r\n");
+        out.write("\r\n");
+        out.write("                        <div class=\"arrowlogin\">\r\n");
+        out.write("                            <img src=\"image/arrow1.png\" alt=\"\"/>\r\n");
+        out.write("                            <a href=\"Login.jsp\">\r\n");
+        out.write("                                <button type=\"submit\">Đăng nhập</button>\r\n");
+        out.write("                            </a>\r\n");
+        out.write("                            <img src=\"image/arrow2.png\" alt=\"\"/>\r\n");
+        out.write("                        </div>\r\n");
+        out.write("\r\n");
+        out.write("                    </div>\r\n");
+        out.write("                ");
+        int evalDoAfterBody = _jspx_th_c_if_2.doAfterBody();
+        if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
+          break;
+      } while (true);
     }
+    if (_jspx_th_c_if_2.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _jspx_tagPool_c_if_test.reuse(_jspx_th_c_if_2);
+      return true;
+    }
+    _jspx_tagPool_c_if_test.reuse(_jspx_th_c_if_2);
+    return false;
+  }
+
+  private boolean _jspx_meth_c_if_3(PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  c:if
+    org.apache.taglibs.standard.tag.rt.core.IfTag _jspx_th_c_if_3 = (org.apache.taglibs.standard.tag.rt.core.IfTag) _jspx_tagPool_c_if_test.get(org.apache.taglibs.standard.tag.rt.core.IfTag.class);
+    _jspx_th_c_if_3.setPageContext(_jspx_page_context);
+    _jspx_th_c_if_3.setParent(null);
+    _jspx_th_c_if_3.setTest(((java.lang.Boolean) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${sessionScope.acc != null}", java.lang.Boolean.class, (PageContext)_jspx_page_context, null)).booleanValue());
+    int _jspx_eval_c_if_3 = _jspx_th_c_if_3.doStartTag();
+    if (_jspx_eval_c_if_3 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
+      do {
+        out.write("   \r\n");
+        out.write("                    <p class=\"p1\">Đăng tin tức mới lên TECHWORD</p>\r\n");
+        out.write("\r\n");
+        out.write("                    <div class=\"upnews\">\r\n");
+        out.write("                        <form action=\"Upnews\" method=\"post\">\r\n");
+        out.write("                            <div class=\"addten\">\r\n");
+        out.write("                                <table>\r\n");
+        out.write("                                    <tr>\r\n");
+        out.write("                                        <td class=\"linkimgn\">Tiêu Đề: </td>\r\n");
+        out.write("                                    </tr>\r\n");
+        out.write("                                    <tr>\r\n");
+        out.write("                                        <td>\r\n");
+        out.write("                                            <input class=\"inputlinkimg\" type=\"text\" name=\"title\">\r\n");
+        out.write("                                        </td>\r\n");
+        out.write("                                    </tr>\r\n");
+        out.write("\r\n");
+        out.write("                                </table>\r\n");
+        out.write("                            </div>\r\n");
+        out.write("\r\n");
+        out.write("                            <div class=\"adddescribe\">\r\n");
+        out.write("                                <table>\r\n");
+        out.write("                                    <tr>\r\n");
+        out.write("                                        <td class=\"linkimgn\">Nội Dung: </td>\r\n");
+        out.write("                                    </tr>\r\n");
+        out.write("                                    <tr>\r\n");
+        out.write("                                        <td>\r\n");
+        out.write("                                            <input class=\"inputdescribe\" type=\"text\" name=\"describe\">\r\n");
+        out.write("                                        </td>\r\n");
+        out.write("                                    </tr>\r\n");
+        out.write("\r\n");
+        out.write("                                </table>\r\n");
+        out.write("                            </div>\r\n");
+        out.write("\r\n");
+        out.write("                            <div class=\"addlinkimg\">\r\n");
+        out.write("                                <table>\r\n");
+        out.write("                                    <tr>\r\n");
+        out.write("                                        <td class=\"linkimgn\">Link Image: </td>\r\n");
+        out.write("                                    </tr>\r\n");
+        out.write("                                    <tr>\r\n");
+        out.write("                                        <td>\r\n");
+        out.write("                                            <input class=\"inputlinkimg\" type=\"text\" name=\"linkimg\">\r\n");
+        out.write("                                        </td>\r\n");
+        out.write("                                    </tr>\r\n");
+        out.write("\r\n");
+        out.write("                                </table>\r\n");
+        out.write("                            </div>\r\n");
+        out.write("                            \r\n");
+        out.write("                            <div class=\"category\">\r\n");
+        out.write("\r\n");
+        out.write("                                <p class=\"choinname\">Chọn Danh Mục: <p>\r\n");
+        out.write("                                    \r\n");
+        out.write("                                    <select class=\"choincate\" name=\"choincate\">\r\n");
+        out.write("                                        <option>PC_Windows</option>\r\n");
+        out.write("                                        <option>SmartPhone</option>\r\n");
+        out.write("                                        <option>SmartWatch</option>\r\n");
+        out.write("                                    </select>\r\n");
+        out.write("                            </div>\r\n");
+        out.write("                            \r\n");
+        out.write("\r\n");
+        out.write("                            <div class=\"upbutton\">\r\n");
+        out.write("                                <button type=\"submit\">Đăng Tin</button>\r\n");
+        out.write("                            </div>\r\n");
+        out.write("                        </form>\r\n");
+        out.write("                    </div>\r\n");
+        out.write("\r\n");
+        out.write("                ");
+        int evalDoAfterBody = _jspx_th_c_if_3.doAfterBody();
+        if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
+          break;
+      } while (true);
+    }
+    if (_jspx_th_c_if_3.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _jspx_tagPool_c_if_test.reuse(_jspx_th_c_if_3);
+      return true;
+    }
+    _jspx_tagPool_c_if_test.reuse(_jspx_th_c_if_3);
     return false;
   }
 }

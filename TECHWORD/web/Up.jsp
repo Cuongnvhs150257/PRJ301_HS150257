@@ -9,7 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Đăng Tin || TECHWORD.VN</title>
-    <link rel="stylesheet" href="styleup2.css">
+    <link rel="stylesheet" href="styleup3.css">
 </head>
 <body>
     <div>
@@ -60,27 +60,88 @@
                     </ul>
                 </div>
                 <div class="right">
+                <c:if test="${sessionScope.acc == null}">
+                    <div class="warning">
+                        <h1>Hãy đăng nhập tài khoản để có thể đăng tin</h1>
 
-                    <p class="p1">Chọn Danh Mục Đăng Tin</p>
+                        <img src="image/warning1.png" alt=""/>
 
-                    <table border="1px solid black">
-                        <tr>
-                            <th>ID</th>
-                            <th>Name</th>
-                        </tr>
+                        <div class="arrowlogin">
+                            <img src="image/arrow1.png" alt=""/>
+                            <a href="Login.jsp">
+                                <button type="submit">Đăng nhập</button>
+                            </a>
+                            <img src="image/arrow2.png" alt=""/>
+                        </div>
 
-                        <tr>
-                            <td>${a.newPost.pid}</td>
-                            <td>${a.newPost.pname}</td>
-                        </tr>
+                    </div>
+                </c:if>
+                <c:if test="${sessionScope.acc != null}">   
+                    <p class="p1">Đăng tin tức mới lên TECHWORD</p>
 
-                    </table>
-                    <c:forEach begin="1" end="${endP}" var="i">
-                        <a href="ListD?index=${i}">${i}</a>
-                    </c:forEach>
+                    <div class="upnews">
+                        <form action="Upnews" method="post">
+                            <div class="addten">
+                                <table>
+                                    <tr>
+                                        <td class="linkimgn">Tiêu Đề: </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input class="inputlinkimg" type="text" name="title">
+                                        </td>
+                                    </tr>
 
+                                </table>
+                            </div>
 
+                            <div class="adddescribe">
+                                <table>
+                                    <tr>
+                                        <td class="linkimgn">Nội Dung: </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input class="inputdescribe" type="text" name="describe">
+                                        </td>
+                                    </tr>
 
+                                </table>
+                            </div>
+
+                            <div class="addlinkimg">
+                                <table>
+                                    <tr>
+                                        <td class="linkimgn">Link Image: </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input class="inputlinkimg" type="text" name="linkimg">
+                                        </td>
+                                    </tr>
+
+                                </table>
+                            </div>
+                            
+                            <div class="category">
+
+                                <p class="choinname">Chọn Danh Mục: <p>
+                                    
+                                    <select class="choincate" name="choincate">
+                                        <option>PC_Windows</option>
+                                        <option>SmartPhone</option>
+                                        <option>SmartWatch</option>
+                                    </select>
+                            </div>
+                            
+
+                            <div class="upbutton">
+                                <button type="submit">Đăng Tin</button>
+                            </div>
+                        </form>
+                    </div>
+
+                </c:if>                         
                 </div>  
     </div>
     <div class="footer">
