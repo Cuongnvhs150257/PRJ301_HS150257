@@ -136,10 +136,42 @@ public class PostsDAO {
         }
     }
     
+    public void deletenews(String Pid){
+        String sql = "delete from Postt\n" +
+                      "where Pid = ?";
+        try {
+            conn = new BaseDAO().BaseDao();
+            ps = conn.prepareStatement(sql);
+            ps.setString(1, Pid);
+            ps.executeUpdate();
+        } catch (Exception e) {
+        }
+    }
+    
+    public void updatenews(String id, String Pname, String title, String describe, String lingimg, int category){
+ 
+        try {
+            String sql="update Postt\n" +
+                        "set Pname = ?, Title = ?, Describe = ?, ImgLink = ?, Category = ?\n" +
+                        "where Pid = ?";
+            
+            conn = new BaseDAO().BaseDao();
+            ps = conn.prepareStatement(sql);
+            ps.setString(1, Pname);
+            ps.setString(2, title);
+            ps.setString(3, describe);
+            ps.setString(4, lingimg);
+            ps.setInt(5, category);
+            ps.setString(6, id);
+            ps.executeUpdate();
+            
+        } catch (Exception e) {
+        }
+    }
     
     public static void main(String[] args) {
         PostsDAO dao = new PostsDAO();
-        //dao.addnews("Mong la chay dc", "aafasfnsndnsddnsjfsnfsjsfn", "https://photo.techrum.vn/images/2022/03/12/D-an-mi1393d9328694067e.jpg");
+        dao.updatenews("15","Nguyen Van Cuong", "Mong la chay dc", "aafasfnsndnsddnsjfsnfsjsfn", "https://photo.techrum.vn/images/2022/03/12/D-an-mi1393d9328694067e.jpg",2);
         
         
     }

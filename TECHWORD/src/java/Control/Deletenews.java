@@ -6,10 +6,8 @@
 package Control;
 
 import DAO.PostsDAO;
-import Entity.Posts;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -20,8 +18,8 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author s
  */
-@WebServlet(name = "UploadPC", urlPatterns = {"/UploadPC"})
-public class UploadPC extends HttpServlet {
+@WebServlet(name = "Deletenews", urlPatterns = {"/Deletenews"})
+public class Deletenews extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -37,27 +35,14 @@ public class UploadPC extends HttpServlet {
         response.setCharacterEncoding("UTF-8");
         response.setContentType("text/html;charset=UTF-8");
         try {
-            String indexPage = request.getParameter("index");
-            if (indexPage == null) {
-                indexPage = "1";
-            }
-            int index = Integer.parseInt(indexPage);
+            String Pid = request.getParameter("Pid");
             
             PostsDAO dao = new PostsDAO();
-            int count = dao.getTotalPost();
-            int endPage = count/3;
-            if(count % 3 != 0){
-                endPage++;
-            }
             
-            List<Posts> list = dao.pagingPost(index);
+            dao.deletenews(Pid);
             
+            response.sendRedirect("PCPage.jsp");
             
-            
-            request.setAttribute("posts", list);
-            request.setAttribute("endP", endPage);
-            request.getRequestDispatcher("Up.jsp").forward(request, response);
-        
         } catch (Exception e) {
         }
     }

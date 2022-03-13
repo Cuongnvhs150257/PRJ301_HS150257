@@ -26,7 +26,7 @@
                         <ul>
                             <li><a href="TECHWORD.jsp">Trang chủ</a></li>
                             <li><a href="Up.jsp">Đăng tin</a></li>
-                            <li><a href="Login.jsp">Tài Khoản</a></li>
+                            <li><a href="Account.jsp">Tài Khoản</a></li>
                             <li><a href=""><img src="icon/notication1.png" alt=""></a></li>
                             <li><a href=""><img src="icon/search1.png" alt=""></a></li>
                         </ul>
@@ -40,7 +40,7 @@
                        
                         <div class="logout">
                             <c:if test="${sessionScope.acc != null}">
-                                <a id="username">Hello ${sessionScope.acc.name}</a>
+                                <a id="username" href="Account.jsp">Hello ${sessionScope.acc.name}</a>
                                 <a id="out" href="LogoutServlet">Đăng xuất</a>
                                 </c:if>
 
@@ -66,7 +66,7 @@
                     </div>
                     <div class="right">
                     
-                        <p>Tin Tức PC_Windows Mới Nhất Hiện Nay</p>
+                        <p>Tin Tức Công Nghệ Mới Nhất Hiện Nay</p>
                         
                         <div class="newspage">
                         

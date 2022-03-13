@@ -20,7 +20,7 @@
                         <ul>
                             <li><a href="TECHWORD.jsp">Trang chủ</a></li>
                             <li><a href="Up.jsp">Đăng tin</a></li>
-                            <li><a href="Login.jsp">Tài Khoản</a></li>
+                            <li><a href="Account.jsp">Tài Khoản</a></li>
                             <li><a href=""><img src="icon/notication1.png" alt=""></a></li>
                             <li><a href=""><img src="icon/search1.png" alt=""></a></li>
                         </ul>
@@ -34,7 +34,7 @@
                        
                         <div class="logout">
                             <c:if test="${sessionScope.acc != null}">
-                                <a id="username">Hello ${sessionScope.acc.name}</a>
+                                <a id="username" href="Account.jsp">Hello ${sessionScope.acc.name}</a>
                                 <a id="out" href="LogoutServlet">Đăng xuất</a>
                                 </c:if>
 
@@ -68,13 +68,13 @@
                                  </a>
                             </div>
                             <div class="item item2">
-                                <a href="SmartphonePage.jsp">
+                                <a href="PCPage.jsp">
                                 <img id="img2" src="image/phone1.jpg" onclick="changeImg2()">
                                 <h2>Smartphone</h2>
                                 </a>
                             </div>
                             <div class="item item3">
-                                <a href="SmartwatchPage.jsp">
+                                <a href="PCPage.jsp">
                                 <img id="img3" src="image/smartwatch1.jpg" onclick="changeImg3()">
                                 <h2>Smartwatch</h2>
                                 </a>

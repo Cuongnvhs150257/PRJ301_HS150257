@@ -25,7 +25,7 @@
                         <ul>
                             <li><a href="TECHWORD.jsp">Trang chủ</a></li>
                             <li><a href="Up.jsp">Đăng tin</a></li>
-                            <li><a href="Login.jsp">Tài Khoản</a></li>
+                            <li><a href="Account.jsp">Tài Khoản</a></li>
                             <li><a href=""><img src="icon/notication1.png" alt=""></a></li>
                             <li><a href=""><img src="icon/search1.png" alt=""></a></li>
                         </ul>

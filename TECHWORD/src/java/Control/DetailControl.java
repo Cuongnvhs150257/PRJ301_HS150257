@@ -33,6 +33,7 @@ public class DetailControl extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        response.setCharacterEncoding("UTF-8");
         response.setContentType("text/html;charset=UTF-8");
         try {
             String id = request.getParameter("id");

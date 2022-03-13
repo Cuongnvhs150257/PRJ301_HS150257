@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="styleup3.css">
 </head>
 <body>
-    <div>
         <div class="containter">
             <div class="header">
                 <div class="logo">
@@ -23,7 +22,7 @@
                     <ul>
                         <li><a href="TECHWORD.jsp">Trang chủ</a></li>
                             <li><a href="Up.jsp">Đăng tin</a></li>
-                            <li><a href="Login.jsp">Tài Khoản</a></li>
+                            <li><a href="Account.jsp">Tài Khoản</a></li>
                             <li><a href=""><img src="icon/notication1.png" alt=""></a></li>
                             <li><a href=""><img src="icon/search1.png" alt=""></a></li>
                     </ul>
@@ -36,7 +35,7 @@
                     <a href=""><img src="icon/user1.png" alt=""></a>
                     <div class="logout">
                         <c:if test="${sessionScope.acc != null}">
-                            <a id="username">Hello ${sessionScope.acc.name}</a>
+                            <a id="username" href="Account.jsp">Hello ${sessionScope.acc.name}</a>
                             <a id="out" href="LogoutServlet">Đăng xuất</a>
                         </c:if>
 
@@ -151,5 +150,6 @@
             <h5>Chủ Quản: <a href="https://www.facebook.com/nguyenvan.cuong.35762241">Nguyễn Văn Cương</a></h5>
         </div>
     </div>
+        </div>          
 </body>
 </html>

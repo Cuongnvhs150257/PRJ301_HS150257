@@ -1,17 +1,22 @@
+<%-- 
+    Document   : EditPage
+    Created on : Mar 13, 2022, 9:16:37 PM
+    Author     : s
+--%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <jsp:useBean id="a" class="DAO.PostsDAO" scope="request"></jsp:useBean>
-    <link rel="icon" href="image/icon1.png">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Đăng Tin || TECHWORD.VN</title>
-    <link rel="stylesheet" href="styleup3.css">
-</head>
-<body>
+<html>
+    <head>
+        <jsp:useBean id="a" class="DAO.PostsDAO" scope="request"></jsp:useBean>
+        <link rel="icon" href="image/icon1.png">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sửa Bài Viết || TECHWORD.VN</title>
+        <link rel="stylesheet" href="styleedit.css">
+    </head>
+    <body>
         <div class="containter">
             <div class="header">
                 <div class="logo">
@@ -59,27 +64,27 @@
                     </ul>
                 </div>
                 <div class="right">
-                <c:if test="${sessionScope.acc == null}">
-                    <div class="warning">
-                        <h1>Hãy đăng nhập tài khoản để có thể đăng tin</h1>
-
-                        <img src="image/warning1.png" alt=""/>
-
-                        <div class="arrowlogin">
-                            <img src="image/arrow1.png" alt=""/>
-                            <a href="Login.jsp">
-                                <button type="submit">Đăng nhập</button>
-                            </a>
-                            <img src="image/arrow2.png" alt=""/>
-                        </div>
-
-                    </div>
-                </c:if>
-                <c:if test="${sessionScope.acc != null}">   
-                    <p class="p1">Đăng tin tức mới lên TECHWORD</p>
+                 
+                    <p class="p1">Sửa bài viết TECHWORD</p>
 
                     <div class="upnews">
-                        <form action="Upnews" method="post">
+                        <form action="Updatenews" method="post">
+                            
+                            <div class="addid">
+                                <table>
+                                    <tr>
+                                        <td class="linkid">ID: </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input class="inputid" type="text" name="id" readonly value="${Detail.pid}">
+                                        </td>
+                                    </tr>
+
+                                </table>
+                            </div>
+                            
+                            
                             <div class="addten">
                                 <table>
                                     <tr>
@@ -87,7 +92,7 @@
                                     </tr>
                                     <tr>
                                         <td>
-                                            <input class="inputlinkimg" type="text" name="title">
+                                            <input class="inputlinkimg" type="text" name="title" value="${Detail.title}">
                                         </td>
                                     </tr>
 
@@ -101,7 +106,7 @@
                                     </tr>
                                     <tr>
                                         <td>
-                                            <input class="inputdescribe" type="text" name="describe">
+                                            <input class="inputdescribe" type="text" name="describe" value="${Detail.describe}">
                                         </td>
                                     </tr>
 
@@ -115,7 +120,7 @@
                                     </tr>
                                     <tr>
                                         <td>
-                                            <input class="inputlinkimg" type="text" name="linkimg">
+                                            <input class="inputlinkimg" type="text" name="linkimg" value="${Detail.imgLink}">
                                         </td>
                                     </tr>
 
@@ -135,12 +140,11 @@
                             
 
                             <div class="upbutton">
-                                <button type="submit">Đăng Tin</button>
+                                <button type="submit">Sửa tin</button>
                             </div>
                         </form>
                     </div>
-
-                </c:if>                         
+                        
                 </div>  
     </div>
     <div class="footer">
@@ -151,5 +155,5 @@
         </div>
     </div>
         </div>          
-</body>
+    </body>
 </html>

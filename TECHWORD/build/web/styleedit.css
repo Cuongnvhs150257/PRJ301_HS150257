@@ -1,0 +1,266 @@
+.containter{
+    width: 1000px;
+    height: auto;
+    margin: 0 auto;
+    font-family: sans-serif;
+    
+}
+.header{
+    width: 100%;
+    height: 150px;
+    display: flex;
+    background-color: #268dee;
+}
+.logo{
+    width: 20%;
+    height: auto;
+}
+.logo img{
+    width: 150px;
+    height: auto;
+}
+.menu{
+    width: 50%;
+    height: 50px;
+}
+.menu ul{
+    list-style: none;
+}
+.menu ul li a{
+    float: left;
+    padding-left: 25px;
+    color: #e7e7e7;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 25px;
+    text-decoration: none;
+}
+.menu ul li a img{
+    width: 20px;
+    height: auto;
+}
+.content{
+    width: 1000px;
+    height: auto;
+    display: flex;
+   
+}
+.left{
+    width: 20%;
+    height: auto;
+}
+.left ul{
+    list-style: none;
+    padding-left: 0px;
+}
+.left ul li a{
+    color: #6caeed;
+    height: 30px;
+    line-height: 30px;
+    text-decoration: none;
+}
+.left ul li img{
+    width: 30px;
+    height: auto;
+}
+.left ul li{
+    padding-bottom: 5px;
+}
+.left p{
+    width: 200px;
+    height: auto;
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.footer{
+    width: 800px;
+    height: 180px;
+    padding-top: 50px;
+     
+}
+.footer h3, h4, h5, a{
+    color: rgb(12, 122, 248);
+    text-decoration: none;
+}
+.right{
+    width: 80%;
+    height: auto;
+}
+
+.p1{
+    text-align: center;
+    font-size: 23px;
+    font-weight: bold;
+    color: rgb(12, 122, 248);
+}
+
+.user {
+    width: 30%;
+    height: auto;
+    display: flex;
+}
+.user a img{
+    margin-top: 5px;
+    width: 40px;
+    height: auto;
+}
+#username{
+    width: 50%;
+    height: 30px;
+    margin-left: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #e7e7e7;
+}
+#out{
+    width: 30%;
+    height: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 15px;
+    color: #e7e7e7;
+    
+}
+.warning{
+    width: 450px;
+    height: 300px;
+    border: 1px solid grey;
+    border-radius: 10px;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-left: 150px;
+}
+.warning h1{
+    margin-top: 20px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: red;
+}
+.warning img{
+    margin-top: 20px;
+    width: 100px;
+    height: auto;
+}
+.arrowlogin{
+    margin-top: 50px;
+    width: 450px;
+    height: 100px;
+    display: flex;
+    border-top: 1px solid grey;
+}
+.arrowlogin img{
+    width: 100px;
+    height: 40px;
+    margin-right: 30px;
+    margin-left: 30px;
+}
+.arrowlogin a button{
+    width: 150px;
+    height: 35px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    background-color: rgb(12, 122, 248);
+}
+.arrowlogin button:hover{
+    font-size: 15px;
+}
+.upnews{
+    width: 700px;
+    height: 730px;
+    border: 1px solid grey;
+    border-radius: 10px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+.addlinkimg{
+    margin-top: 30px;
+    width: 700px;
+    height: 100px;
+}
+.addlinkimg table{
+    width: 300px;
+    height: 100px;
+}
+.linkimgn{
+    width: 50px;
+    height: 30px;
+    padding-left: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(12, 122, 248);
+}
+.inputlinkimg{
+    width: 650px;
+    height: 50px;
+    margin-left: 20px;
+}
+.addten{
+    margin-top: 10px;
+    width: 700px;
+    height: 100px;
+}
+.adddescribe{
+    width: 700px;
+    height: 200px;
+}
+.inputdescribe{
+    width: 650px;
+    height: 150px;
+    margin-left: 20px;
+}
+.upbutton button{
+    width: 150px;
+    height: 35px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    background-color: rgb(12, 122, 248);
+    margin-left: 280px;
+}
+.upbutton button:hover{
+    font-size: 15px;
+}
+.category{
+    width: 700px;
+    height: 100px;
+}
+.choinname{
+    width: 300px;
+    height: 30px;
+    padding-left: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(12, 122, 248);
+}
+.choincate{
+    width: 300px;
+    height: 30px;
+    font-size: 15px;
+    font-weight: bold;
+    margin-left: 20px;
+}
+.linkid{
+    margin-top: 20px;
+    width: 50px;
+    height: 30px;
+    padding-left: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(12, 122, 248);
+}
+.inputid{
+    width: 100px;
+    height: 30px;
+    margin-left: 20px;
+    background-color: #dfdfdf;
+    text-align: center;
+    font-size: 18px;
+}
+

@@ -39,7 +39,6 @@
     width: 20px;
     height: auto;
 }
-
 .content{
     width: 1000px;
     height: auto;
@@ -73,12 +72,6 @@
     font-size: 18px;
     font-family: 'Times New Roman', Times, serif;
 }
-.right{
-    width: 80%;
-    height: auto;
-    margin: 0 auto;
-}
-
 .footer{
     width: 800px;
     height: 180px;
@@ -89,6 +82,18 @@
     color: rgb(12, 122, 248);
     text-decoration: none;
 }
+.right{
+    width: 80%;
+    height: auto;
+}
+
+.p1{
+    text-align: center;
+    font-size: 23px;
+    font-weight: bold;
+    color: rgb(12, 122, 248);
+}
+
 .user {
     width: 30%;
     height: auto;
@@ -116,49 +121,58 @@
     color: #e7e7e7;
     
 }
-.top{
-    width: auto;
-    height: 120px;
-    background-color: #268dee;
-    margin-bottom: 30px;
-}
-.top h2{
-    padding-top: 8px;
-    color: white;
-    padding-left: 10px;
-}
-.top p{
-    color: lavenderblush;
-    padding-left: 10px;
-    font-weight: bold;
-}
-.center{
-    width: 100px;
-    height: auto;
+.upnews{
+    width: 700px;
+    height: 300px;
+    border: 1px solid grey;
+    border-radius: 10px;
+    margin: 0 auto;
+    margin-top: 30px;
     display: flex;
 }
-.center p{
-    padding-left: 10px;
-    padding-top: 20px;
+.editbutton a button{
+    width: 150px;
+    height: 35px;
+    margin-bottom: 10px;
+    margin-top: 100px;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    background-color: rgb(12, 122, 248);
+}
+.deletebutton a button{
+    width: 150px;
+    height: 35px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    background-color: rgb(12, 122, 248);
+}
+.buttonblock{
+    width: 300px;
+    height: 300px;
+    margin-left: 100px;
+}
+.deletebutton a button:hover{
     font-size: 15px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
 }
-.center img{
-    width: 80px;
-    height: auto;
+.editbutton a button:hover{
+    font-size: 15px;
 }
-.text img{
-    width: 800px;
+.accimg{
+    width: 300px;
+    height: 250px;
+    text-align: center;
+}
+.accimg img{
+    width: 200px;
     height: auto;
     padding-top: 30px;
 }
-.text p{
-    padding-right: 10px;
-    font-size: 15px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+.accimg h1{
+    font-size: 25px;
 }
-
-
 
 

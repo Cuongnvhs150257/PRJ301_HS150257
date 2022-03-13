@@ -5,23 +5,24 @@
  */
 package Control;
 
+import DAO.AccountDAO;
 import DAO.PostsDAO;
-import Entity.Posts;
+import Entity.Account;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
  * @author s
  */
-@WebServlet(name = "UploadPC", urlPatterns = {"/UploadPC"})
-public class UploadPC extends HttpServlet {
+@WebServlet(name = "Updatenews", urlPatterns = {"/Updatenews"})
+public class Updatenews extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -37,27 +38,35 @@ public class UploadPC extends HttpServlet {
         response.setCharacterEncoding("UTF-8");
         response.setContentType("text/html;charset=UTF-8");
         try {
-            String indexPage = request.getParameter("index");
-            if (indexPage == null) {
-                indexPage = "1";
+            String id = request.getParameter("id");
+            String title = request.getParameter("title");
+            String describe = request.getParameter("describe");
+            String linkimg = request.getParameter("linkimg");
+            String choice = request.getParameter("choincate");
+            
+            
+            int category = 0;
+            
+            
+            if(choice.equals("PC_Windows")){
+                category = 1;
+            }else if(choice.equals("SmartPhone")){
+                category = 2;
+            }else if(choice.equals("SmartWatch")){
+                category = 3;
+            }else{
+                category = 1;
             }
-            int index = Integer.parseInt(indexPage);
-            
-            PostsDAO dao = new PostsDAO();
-            int count = dao.getTotalPost();
-            int endPage = count/3;
-            if(count % 3 != 0){
-                endPage++;
-            }
-            
-            List<Posts> list = dao.pagingPost(index);
             
             
+            HttpSession session = request.getSession();
+            Account a = (Account) session.getAttribute("acc");
+            AccountDAO dao = new AccountDAO();
+            String Pname = a.getName();
             
-            request.setAttribute("posts", list);
-            request.setAttribute("endP", endPage);
-            request.getRequestDispatcher("Up.jsp").forward(request, response);
-        
+            PostsDAO daop = new PostsDAO();
+            daop.updatenews(id, Pname, title, describe, linkimg, category);
+            response.sendRedirect("PCPage.jsp");
         } catch (Exception e) {
         }
     }

@@ -13,7 +13,7 @@
         <link rel="icon" href="image/icon1.png">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Read || TECHWORD.VN</title>
-        <link href="styleread.css" rel="stylesheet" type="text/css"/>
+        <link href="styleread2.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
         <div>
@@ -27,7 +27,7 @@
                         <ul>
                             <li><a href="TECHWORD.jsp">Trang chủ</a></li>
                             <li><a href="Up.jsp">Đăng tin</a></li>
-                            <li><a href="Login.jsp">Tài Khoản</a></li>
+                            <li><a href="Account.jsp">Tài Khoản</a></li>
                             <li><a href=""><img src="icon/notication1.png" alt=""></a></li>
                             <li><a href=""><img src="icon/search1.png" alt=""></a></li>
                         </ul>
@@ -41,7 +41,7 @@
                        
                         <div class="logout">
                             <c:if test="${sessionScope.acc != null}">
-                                <a id="username">Hello ${sessionScope.acc.name}</a>
+                                <a id="username" href="Account.jsp">Hello ${sessionScope.acc.name}</a>
                                 <a id="out" href="LogoutServlet">Đăng xuất</a>
                                 </c:if>
 
@@ -79,8 +79,20 @@
                         <div class="text">
                             <img src="${Detail.imgLink}" alt="Anh 1">
                             <p>${Detail.describe}</p>
-                    </div>
+                        </div>
+                        <c:if test="${sessionScope.acc != null}">
+                            <div class="deletebutton">
+                                <a href="Loadnews?Pid=${Detail.pid}">
+                                    <button type="submit">Sửa bài viết</button>
+                                </a>
+                            </div>
 
+                            <div class="deletebutton">
+                                <a href="Deletenews?Pid=${Detail.pid}">
+                                    <button type="submit">Xóa bài viết</button>
+                                </a>
+                            </div>
+                        </c:if>    
                 </div>
             </div>
         <div class="footer">
