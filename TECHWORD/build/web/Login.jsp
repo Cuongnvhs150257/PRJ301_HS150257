@@ -2,12 +2,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <jsp:useBean id="a" class="DAO.AccountDAO" scope="request"></jsp:useBean>
     <link rel="icon" href="image/icon1.png">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="stytlelogin.css">
-    <script src="loginjs.js"></script>
+    <script src="loginjs2.js"></script>
     <title>Đăng Nhập | TECHWORD.VN</title>
 </head>
 <body>
@@ -70,7 +71,8 @@
                                 <input type="checkbox">Nhớ Mật Khẩu
                             </div>
                             <br>
-                            <button type="submit" onclick="send()" >Đăng Nhập</button>
+                            <button type="submit"  >Đăng Nhập</button>
+                        <%--onclick="sendb(${a.checkPass(username).pass})" --%>
                             <br>
                             <a class="a1" href="#">Quên Mật Khẩu?</a>
                             <br>

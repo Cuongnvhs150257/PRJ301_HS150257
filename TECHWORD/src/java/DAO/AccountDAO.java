@@ -7,10 +7,13 @@ package DAO;
 
 import Context.BaseDAO;
 import Entity.Account;
+import Entity.Posts;
 import java.sql.Connection;
 import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
@@ -65,18 +68,38 @@ public class AccountDAO {
         return null;
         
     }
-    public void Sinup(String user, String pass, Date dob){
-        String query = "INSERT INTO Account([name],[pass],[dob]) VALUES(?,?,?)";
+    public void Sinup(String user, String pass){
+        String query = "INSERT INTO Account([name],[pass]) VALUES(?,?)";
     
         try {
             conn = new BaseDAO().BaseDao();
             ps = conn.prepareStatement(query);
             ps.setString(1, user);
             ps.setString(2, pass);
-            ps.setDate(3, dob);
+            //ps.setDate(3, dob);
             ps.executeUpdate();
         } catch (Exception e) {
         }
     
     }
+    
+     public Account checkPass(String username){
+        try {
+            String sql = "select pass from Account\n" +
+                         "where name = ?";
+            conn = new BaseDAO().BaseDao();
+            ps = conn.prepareStatement(sql);
+            ps.setString(1, username);
+            rs = ps.executeQuery();
+            while(rs.next()){
+                Account a = new Account (rs.getInt(1),rs.getString(2),rs.getString(3),rs.getDate(4));
+                        return a;
+            }
+
+        } catch (Exception e) {
+        }
+        
+        return null;
+    } 
+    
 }

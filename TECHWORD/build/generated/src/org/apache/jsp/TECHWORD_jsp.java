@@ -73,7 +73,7 @@ public final class TECHWORD_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                        <ul>\r\n");
       out.write("                            <li><a href=\"TECHWORD.jsp\">Trang chủ</a></li>\r\n");
       out.write("                            <li><a href=\"Up.jsp\">Đăng tin</a></li>\r\n");
-      out.write("                            <li><a href=\"Login.jsp\">Tài Khoản</a></li>\r\n");
+      out.write("                            <li><a href=\"Account.jsp\">Tài Khoản</a></li>\r\n");
       out.write("                            <li><a href=\"\"><img src=\"icon/notication1.png\" alt=\"\"></a></li>\r\n");
       out.write("                            <li><a href=\"\"><img src=\"icon/search1.png\" alt=\"\"></a></li>\r\n");
       out.write("                        </ul>\r\n");
@@ -122,13 +122,13 @@ public final class TECHWORD_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                                 </a>\r\n");
       out.write("                            </div>\r\n");
       out.write("                            <div class=\"item item2\">\r\n");
-      out.write("                                <a href=\"SmartphonePage.jsp\">\r\n");
+      out.write("                                <a href=\"PCPage.jsp\">\r\n");
       out.write("                                <img id=\"img2\" src=\"image/phone1.jpg\" onclick=\"changeImg2()\">\r\n");
       out.write("                                <h2>Smartphone</h2>\r\n");
       out.write("                                </a>\r\n");
       out.write("                            </div>\r\n");
       out.write("                            <div class=\"item item3\">\r\n");
-      out.write("                                <a href=\"SmartwatchPage.jsp\">\r\n");
+      out.write("                                <a href=\"PCPage.jsp\">\r\n");
       out.write("                                <img id=\"img3\" src=\"image/smartwatch1.jpg\" onclick=\"changeImg3()\">\r\n");
       out.write("                                <h2>Smartwatch</h2>\r\n");
       out.write("                                </a>\r\n");
@@ -206,7 +206,7 @@ public final class TECHWORD_jsp extends org.apache.jasper.runtime.HttpJspBase
     if (_jspx_eval_c_if_0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
       do {
         out.write("\r\n");
-        out.write("                                <a id=\"username\">Hello ");
+        out.write("                                <a id=\"username\" href=\"Account.jsp\">Hello ");
         out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${sessionScope.acc.name}", java.lang.String.class, (PageContext)_jspx_page_context, null));
         out.write("</a>\r\n");
         out.write("                                <a id=\"out\" href=\"LogoutServlet\">Đăng xuất</a>\r\n");

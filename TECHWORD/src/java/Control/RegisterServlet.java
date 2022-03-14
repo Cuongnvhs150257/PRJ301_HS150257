@@ -42,21 +42,23 @@ public class RegisterServlet extends HttpServlet {
         try {
             String name = request.getParameter("username");
             String pass = request.getParameter("password");
-            String date = request.getParameter("date");
-            String month = request.getParameter("month");
-            String year = request.getParameter("year");
+            //String date = request.getParameter("date");
+            //String month = request.getParameter("month");
+            //String year = request.getParameter("year");
       
             AccountDAO dao = new AccountDAO();
             Account a = dao.checkaccountexist(name);
             
+            /*
             int datea = Integer.parseInt(date);
             int montha = Integer.parseInt(month);
             int yeara = Integer.parseInt(year);
             
             Date datecover = (Date) new GregorianCalendar(yeara, montha, datea).getTime();
+            */
             
             if(a == null){
-                dao.Sinup(name, pass, datecover);
+                dao.Sinup(name, pass);
                 response.sendRedirect("Login.jsp");
             }else{
                 response.sendRedirect("register.jsp");
