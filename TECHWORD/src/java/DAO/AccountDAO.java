@@ -101,5 +101,21 @@ public class AccountDAO {
         
         return null;
     } 
+     public Account getAllAccount(){
+        try {
+            String sql = "select * from Account";
+            conn = new BaseDAO().BaseDao();
+            ps = conn.prepareStatement(sql);
+            rs = ps.executeQuery();
+            while(rs.next()){
+                Account a = new Account (rs.getInt(1),rs.getString(2),rs.getString(3),rs.getDate(4));
+                        return a;
+            }
+
+        } catch (Exception e) {
+        }
+        
+        return null;
+    } 
     
 }

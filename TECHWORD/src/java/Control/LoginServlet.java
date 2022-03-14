@@ -11,6 +11,7 @@ import Entity.Account;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -34,35 +35,7 @@ public class LoginServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        try {
-            String user = request.getParameter("username");
-            String pass = request.getParameter("password");
-            
-            /*
-            String pass1 = "12345";
-            
-            if(pass.equals(pass1)){
-                response.sendRedirect("TECHWORD.html");
-            }else{
-                response.sendRedirect("Login.html");
-            }
-            */
-            
-            AccountDAO dao = new AccountDAO();
-            Account a = dao.login(user, pass);
-            if(a == null){
-                
-                request.getRequestDispatcher("Login.jsp").forward(request, response);
-            }else{
-                HttpSession session = request.getSession();
-                session.setAttribute("acc", a);
-                request.getRequestDispatcher("TECHWORD.jsp").forward(request, response);
-                
-            }
-            
-            
-        } catch (Exception e) {
-        }
+        
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -77,7 +50,20 @@ public class LoginServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        //processRequest(request, response);
+        Cookie arr[] = request.getCookies();
+        if(arr != null){
+            for (Cookie o : arr) {
+            if(o.getName().equals("userC")){
+                request.setAttribute("username", o.getValue());
+            }
+            if(o.getName().equals("passC")){
+                request.setAttribute("password", o.getValue());
+            }
+        }
+        }
+        
+        request.getRequestDispatcher("Login.jsp").forward(request, response);
     }
 
     /**
@@ -91,7 +77,56 @@ public class LoginServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-         processRequest(request, response);
+         //processRequest(request, response);
+         try {
+            String user = request.getParameter("username");
+            String pass = request.getParameter("password");
+            String remember = request.getParameter("remember");
+            /*
+            String pass1 = "12345";
+            
+            if(pass.equals(pass1)){
+                response.sendRedirect("TECHWORD.html");
+            }else{
+                response.sendRedirect("Login.html");
+            }
+            //Pattern p = Pattern.compile("^[a-zA-Z0-9]{6,}$");
+            Pattern p = Pattern.compile("^.*[A-Z]+.*$");  //{8,}
+            
+            if(p.matcher(pass).find()){
+            
+            }else{
+            }
+            */
+            
+            AccountDAO dao = new AccountDAO();
+            Account a = dao.login(user, pass);
+            if(a == null){
+                
+                request.getRequestDispatcher("Login.jsp").forward(request, response);
+            }else{
+                HttpSession session = request.getSession();
+                session.setAttribute("acc", a);
+                
+                Cookie u = new Cookie("userC",user);
+                Cookie p = new Cookie("passC", pass);
+                u.setMaxAge(60*60);
+                if(remember != null){
+                    p.setMaxAge(60*60);
+                }else{
+                    p.setMaxAge(0);
+                }
+                
+                response.addCookie(u);
+                response.addCookie(p);
+                request.getRequestDispatcher("TECHWORD.jsp").forward(request, response);
+                
+                
+            }
+            
+            
+        } catch (Exception e) {
+        }
     }
 
     /**

@@ -45,7 +45,7 @@
                         </c:if>
 
                         <c:if test="${sessionScope.acc == null}">
-                            <a id="out" href="Login.jsp">Đăng nhập</a>
+                            <a id="out" href="LoginServlet">Đăng nhập</a>
                         </c:if>
                     </div>
                 </div>

@@ -51,13 +51,13 @@
                             <br>
                             <p>Tên tài khoản</p>
                             <br>
-                            <input type="text" id="username" name="username" placeholder="Nhập tên tài khoản">
+                            <input value="${username}" type="text" id="username" name="username" placeholder="Nhập tên tài khoản">
                             <span id="username_error"></span>
                             <br>
                             <p class="p2">Mật khẩu</p>
                             <br>
                             <div class="pass">
-                                <input type="text" id="password" name="password" placeholder="Nhập mật khẩu">
+                                <input value="${password}" type="text" id="password" name="password" placeholder="Nhập mật khẩu">
                                 <span id="password_error"></span>
                                 <img onclick="hidepass()">
                                 <script>
@@ -68,11 +68,12 @@
                             </div>
                             <br>
                             <div class="check">
-                                <input type="checkbox">Nhớ Mật Khẩu
+                                <input name="remember" value="1" type="checkbox">Nhớ Mật Khẩu
                             </div>
                             <br>
-                            <button type="submit"  >Đăng Nhập</button>
-                        <%--onclick="sendb(${a.checkPass(username).pass})" --%>
+                            
+                            <button type="submit" onclick="sendb(${password})" >Đăng Nhập</button>
+                        <%-- --%>
                             <br>
                             <a class="a1" href="#">Quên Mật Khẩu?</a>
                             <br>

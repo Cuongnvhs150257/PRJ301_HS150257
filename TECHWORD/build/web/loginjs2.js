@@ -5,15 +5,16 @@ function sendb(Bpass){
     var check = arr[2].value;
     
 
-    if(name === "" || pass === ""){
+    if(name == "" || pass == ""){
         alert("Bạn không thể để trống tài khoản và mật khẩu!");
-    }else if (pass === Bpass){ 
+    }else if (Bpass != null && pass != Bpass){ 
+        alert("Sai mật khẩu!");
+    }else if(pass = Bpass && Bpass != null){
         confirm('Bạn đã đăng nhập thành công vào TECHWORD.VN');
-    }else{
-        alert("Sai mật khẩu!" + Bpass);
     }
     
 }
+
 
 /*
 function show(id){
