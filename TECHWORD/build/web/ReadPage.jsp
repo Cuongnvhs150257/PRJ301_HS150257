@@ -80,7 +80,7 @@
                             <img src="${Detail.imgLink}" alt="Anh 1">
                             <p>${Detail.describe}</p>
                         </div>
-                        <c:if test="${sessionScope.acc != null}">
+                            <c:if test="${sessionScope.acc != null && sessionScope.acc.name == Detail.pname}">
                             <div class="deletebutton">
                                 <a href="Loadnews?Pid=${Detail.pid}">
                                     <button type="submit">Sửa bài viết</button>

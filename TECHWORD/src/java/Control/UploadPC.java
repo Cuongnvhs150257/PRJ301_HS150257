@@ -56,7 +56,7 @@ public class UploadPC extends HttpServlet {
             
             request.setAttribute("posts", list);
             request.setAttribute("endP", endPage);
-            request.getRequestDispatcher("Up.jsp").forward(request, response);
+            request.getRequestDispatcher("SmartphonePage.jsp").forward(request, response);
         
         } catch (Exception e) {
         }

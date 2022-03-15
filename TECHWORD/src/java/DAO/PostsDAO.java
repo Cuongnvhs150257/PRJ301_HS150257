@@ -40,15 +40,15 @@ public class PostsDAO {
     
     public List<Posts>pagingPost(int index){
         List<Posts> list = new ArrayList<>();
-        String sql="SELECT * FROM\n" +
-"(SELECT Pid, Pname, Title, Describe, ImgLink,Category\n" +
-"ROW_NUMBER() OVER (ORDER BY Pid) AS Seq\n" +
-"FROM         dbo.Postt)t\n" +
-"WHERE Seq BETWEEN ? AND 8";
+        String sql="select Pid, Pname, Title, Describe, ImgLink, Category from\n" +
+"(select ROW_NUMBER() over (order by Pid desc) as r, *\n" +
+"from Postt) as x\n" +
+" where r between ? and ?";
         try {
             conn = new BaseDAO().BaseDao();
             ps = conn.prepareStatement(sql);
-            ps.setInt(1, (index-1)*5);
+            ps.setInt(1, (index-1)*3);
+            ps.setInt(2, index * 3);
             rs = ps.executeQuery();
             while(rs.next()){
                 list.add(new Posts(rs.getInt(1),rs.getString(2),rs.getString(3),rs.getString(4),rs.getString(5),rs.getInt(6)));

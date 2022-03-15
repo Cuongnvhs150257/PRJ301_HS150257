@@ -113,9 +113,9 @@
                         </c:forEach>
                               
                     </div>
-                    <c:forEach begin="1" end="8" var="i">
+                    <c:forEach begin="1" end="${endP}" var="i">
                         <div class="paging">
-                            <a href="ListD?index=${i}">${i}</a>
+                            <a href="UploadPC?index=${i}">${i}</a>
                         </div>
                     </c:forEach>
                 </div>  
