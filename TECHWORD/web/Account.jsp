@@ -13,7 +13,7 @@
         <link rel="icon" href="image/icon1.png">
         <title>Account| TECHWORD.VN</title>
         <meta charset="utf-8">
-        <link href="styleaccount.css" rel="stylesheet" type="text/css"/>
+        <link href="styleaccount1.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
         <div>
@@ -90,6 +90,13 @@
                                         <button type="submit">Xóa tài khoản</button>
                                     </a>
                                 </div>
+                                <c:if test="${sessionScope.acc != null && sessionScope.acc.name == "Admin"}">
+                                <div class="dashbroad">
+                                    <a href="Dashbroadcontrol">
+                                        <button type="submit">Quản lý trang</button>
+                                    </a>
+                                </div>
+                                </c:if>
                             </div>        
                         </div>
                         </c:if>     
