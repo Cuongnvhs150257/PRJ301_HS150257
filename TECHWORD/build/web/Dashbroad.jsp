@@ -64,9 +64,9 @@
                         </ul>
                     </div>
                     <div class="right">
-                        
+
                         <p>Tổng hợp dữ liệu TECHWORD</p>
-                        
+
                         <div class="showdata">
                             <div class="View">
                                 <p>Lượt truy cập</p>
@@ -80,14 +80,10 @@
                                 <p>Doanh Thu</p>
                                 <p>${money}.000 VNĐ</p>
                             </div>
-                            
+
                         </div>
-                        
-                        
-                        
-                        
-                        
-                        
+
+
                         <p>Quản lý bài viết TECHWORD</p>
 
                         <table>
@@ -118,8 +114,8 @@
                                             </div>
 
                                             <div class="deletebutton">
-                                                <a href="Deletenews?Pid=${o.pid}">
-                                                    <button type="submit">Xóa bài viết</button>
+                                                <a href="#">
+                                                    <button onclick="show(${o.pid})" type="submit">Xóa bài viết</button>
                                                 </a>
                                             </div>
                                         </th>
@@ -135,7 +131,14 @@
 
                     </div>  
                 </div>
-
+                <script>
+                    function show(pid) {
+                        var option = confirm('Bạn có muốn Xóa bài viết này không');
+                        if (option === true) {
+                            window.location.href = 'Deletenews?Pid=' + pid;
+                        }
+                    }
+                </script>            
                 <div class="footer">
                     <div class="about us">
                         <h3>Về Chúng Tôi</h3>

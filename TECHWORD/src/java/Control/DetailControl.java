@@ -40,7 +40,7 @@ public class DetailControl extends HttpServlet {
             int idd = Integer.parseInt(id);
             PostsDAO dao = new PostsDAO();
             Posts d = dao.getDetail(idd);
- 
+
             request.setAttribute("Detail", d);
             request.getRequestDispatcher("ReadPage.jsp").forward(request, response);
             
