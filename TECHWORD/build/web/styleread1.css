@@ -118,7 +118,7 @@
 }
 .top{
     width: auto;
-    height: 120px;
+    height: 150px;
     background-color: #268dee;
     margin-bottom: 30px;
 }
@@ -173,14 +173,6 @@
 }
 .deletebutton a button:hover{
     font-size: 15px;
-}
-.View{
-    width: 100px;
-    height: 30px;
-}
-.View img{
-    width: 30px;
-    height: auto;
 }
 
 

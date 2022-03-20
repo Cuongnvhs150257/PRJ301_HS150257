@@ -10,28 +10,47 @@ package Entity;
  * @author s
  */
 public class View {
-    public int view;
+    private int Viewed;
+    private int Viewpost;
+    private int Pid;
 
     public View() {
     }
 
-    public View(int view) {
-        this.view = view;
+    public View(int Viewed, int Viewpost, int Pid) {
+        this.Viewed = Viewed;
+        this.Viewpost = Viewpost;
+        this.Pid = Pid;
     }
 
-    public int getView() {
-        return view;
+    public int getViewed() {
+        return Viewed;
     }
 
-    public void setView(int view) {
-        this.view = view;
+    public void setViewed(int Viewed) {
+        this.Viewed = Viewed;
+    }
+
+    public int getViewpost() {
+        return Viewpost;
+    }
+
+    public void setViewpost(int Viewpost) {
+        this.Viewpost = Viewpost;
+    }
+
+    public int getPid() {
+        return Pid;
+    }
+
+    public void setPid(int Pid) {
+        this.Pid = Pid;
     }
 
     @Override
     public String toString() {
-        return "View{" + "view=" + view + '}';
+        return "View{" + "Viewed=" + Viewed + ", Viewpost=" + Viewpost + ", Pid=" + Pid + '}';
     }
-    
     
     
 }

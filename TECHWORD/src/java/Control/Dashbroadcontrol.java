@@ -8,6 +8,7 @@ package Control;
 import DAO.PostsDAO;
 import DAO.ViewDAO;
 import Entity.Posts;
+import Entity.View;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
@@ -57,12 +58,9 @@ public class Dashbroadcontrol extends HttpServlet {
             List<Posts> list = dao.pagingPost(index);
             
             ViewDAO view = new ViewDAO();
-            HttpSession session = request.getSession();
-            if(session.isNew()){
-                view.addview();
-            }
-    
+
             int viewed = view.getView();
+           
             
             request.setAttribute("viewed", viewed);
             request.setAttribute("money", money);

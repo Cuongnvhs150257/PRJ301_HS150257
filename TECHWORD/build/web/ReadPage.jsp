@@ -70,7 +70,7 @@
                         <div class="top">
                             <h2>${Detail.title}</h2>
                             <p> Tác giả: ${Detail.pname}</p>
-
+                            <p> Lượt xem: ${View.viewpost}</p>
                         </div>
                         <div class="center">
                             <img src="icon/user1.png" alt="Anh 1">

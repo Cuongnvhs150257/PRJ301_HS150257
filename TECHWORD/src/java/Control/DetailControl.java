@@ -6,7 +6,9 @@
 package Control;
 
 import DAO.PostsDAO;
+import DAO.ViewDAO;
 import Entity.Posts;
+import Entity.View;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -14,6 +16,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
@@ -37,10 +40,20 @@ public class DetailControl extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try {
             String id = request.getParameter("id");
+            
             int idd = Integer.parseInt(id);
             PostsDAO dao = new PostsDAO();
             Posts d = dao.getDetail(idd);
-
+            
+            ViewDAO view = new ViewDAO();
+            HttpSession session = request.getSession();
+            if(id != null){
+                view.addviewpost(idd);
+            }
+    
+            View v = view.getViewpost(idd);
+            
+            request.setAttribute("View", v);
             request.setAttribute("Detail", d);
             request.getRequestDispatcher("ReadPage.jsp").forward(request, response);
             
