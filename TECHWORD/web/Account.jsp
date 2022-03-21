@@ -80,13 +80,13 @@
                         
                             <div class="buttonblock">
                                 <div class="editbutton">
-                                    <a href="TECHWORD.jsp">
+                                    <a href="Updateaccount?id=${sessionScope.acc.id}">
                                         <button type="submit">Sửa tài khoản</button>
                                     </a>
                                 </div>
 
                                 <div class="deletebutton">
-                                    <a href="TECHWORD.jsp">
+                                    <a href="Deleteaccount?id=${sessionScope.acc.id}">
                                         <button type="submit">Xóa tài khoản</button>
                                     </a>
                                 </div>

@@ -1,6 +1,6 @@
 <%-- 
-    Document   : EditPage
-    Created on : Mar 13, 2022, 9:16:37 PM
+    Document   : EditAccount
+    Created on : Mar 21, 2022, 2:04:50 PM
     Author     : s
 --%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
@@ -8,13 +8,13 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <jsp:useBean id="a" class="DAO.PostsDAO" scope="request"></jsp:useBean>
+        <jsp:useBean id="a" class="DAO.AccountDAO" scope="request"></jsp:useBean>
         <link rel="icon" href="image/icon1.png">
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Sửa Bài Viết || TECHWORD.VN</title>
-        <link rel="stylesheet" href="styleedit.css">
+        <link rel="stylesheet" href="styleeditaccount.css">
     </head>
     <body>
         <div class="containter">
@@ -33,7 +33,7 @@
                     </ul>
                 </div>
                 <div class="search">
-    
+
                 </div>
                 
                 <div class="user">
@@ -65,10 +65,10 @@
                 </div>
                 <div class="right">
                  
-                    <p class="p1">Sửa bài viết TECHWORD</p>
+                    <p class="p1">Sửa tài khoản TECHWORD</p>
 
                     <div class="upnews">
-                        <form action="Updatenews" method="post">
+                        <form action="Updateaccount" method="post">
                             
                             <div class="addid">
                                 <table>
@@ -77,7 +77,7 @@
                                     </tr>
                                     <tr>
                                         <td>
-                                            <input class="inputid" type="text" name="id" readonly value="${Detail.pid}">
+                                            <input class="inputid" type="text" name="id" readonly value="${AccoutnDetail.id}">
                                         </td>
                                     </tr>
 
@@ -88,11 +88,11 @@
                             <div class="addten">
                                 <table>
                                     <tr>
-                                        <td class="linkimgn">Tiêu Đề: </td>
+                                        <td class="linkimgn">Tên Tài Khoản: </td>
                                     </tr>
                                     <tr>
                                         <td>
-                                            <input class="inputlinkimg" type="text" name="title" value="${Detail.title}">
+                                            <input class="inputlinkimg" type="text" name="name" value="${AccoutnDetail.name}">
                                         </td>
                                     </tr>
 
@@ -102,45 +102,20 @@
                             <div class="adddescribe">
                                 <table>
                                     <tr>
-                                        <td class="linkimgn">Nội Dung: </td>
+                                        <td class="linkimgn">Mật Khẩu: </td>
                                     </tr>
                                     <tr>
                                         <td>
-                                            <input class="inputdescribe" type="text" name="describe" value="${Detail.describe}">
+                                            <input class="inputdescribe" type="text" name="pass" value="${AccoutnDetail.pass}">
                                         </td>
                                     </tr>
 
                                 </table>
                             </div>
 
-                            <div class="addlinkimg">
-                                <table>
-                                    <tr>
-                                        <td class="linkimgn">Link Image: </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <input class="inputlinkimg" type="text" name="linkimg" value="${Detail.imgLink}">
-                                        </td>
-                                    </tr>
-
-                                </table>
-                            </div>
-                            
-                            <div class="category">
-
-                                <p class="choinname">Chọn Danh Mục: <p>
-                                    
-                                    <select class="choincate" name="choincate">
-                                        <option>PC_Windows</option>
-                                        <option>SmartPhone</option>
-                                        <option>SmartWatch</option>
-                                    </select>
-                            </div>
-                            
-
+                           
                             <div class="upbutton">
-                                <button type="submit">Sửa tin</button>
+                                <button type="submit">Sửa tài khoản</button>
                             </div>
                         </form>
                     </div>

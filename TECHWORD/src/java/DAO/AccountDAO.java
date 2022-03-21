@@ -118,4 +118,56 @@ public class AccountDAO {
         return null;
     } 
     
+    public void deleteaccount(String Pid){
+        String sql = "delete from Account\n" +
+                      "where id = ?";
+        try {
+            conn = new BaseDAO().BaseDao();
+            ps = conn.prepareStatement(sql);
+            ps.setString(1, Pid);
+            ps.executeUpdate();
+        } catch (Exception e) {
+        }
+    }
+    
+    public void updateaccount(String id, String name, String pass){
+ 
+        try {
+            String sql="update Account\n" +
+                       "set name = ?, pass = ?\n" +
+                        "where id = ?";
+            
+            conn = new BaseDAO().BaseDao();
+            ps = conn.prepareStatement(sql);
+            ps.setString(1, name);
+            ps.setString(2, pass);
+            ps.setString(3, id);
+            ps.executeUpdate();
+            
+        } catch (Exception e) {
+        }
+    } 
+    public Account getDetailAccount (String id){
+        try {
+            String sql = "select * from Account\n" +
+                         "where id = ?";
+            conn = new BaseDAO().BaseDao();
+            ps = conn.prepareStatement(sql);
+            ps.setString(1, id);
+            rs = ps.executeQuery();
+            while(rs.next()){
+                Account a = new Account (rs.getInt(1),rs.getString(2),rs.getString(3),rs.getDate(4));
+                        return a;
+            }
+
+        } catch (Exception e) {
+        }
+        
+        return null;
+    }  
+    
+    public static void main(String[] args) {
+        AccountDAO dao = new AccountDAO();
+        dao.updateaccount("SuaRoi", "012345","8");
+    }
 }

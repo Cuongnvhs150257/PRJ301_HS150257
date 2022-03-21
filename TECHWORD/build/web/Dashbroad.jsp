@@ -11,7 +11,7 @@
         <link rel="icon" href="image/icon1.png">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Dashbroad || TECHWORD.VN</title>
-        <link href="styledashbroad.css" rel="stylesheet" type="text/css"/>
+        <link href="styledashbroad1.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
         <div>
@@ -65,7 +65,7 @@
                     </div>
                     <div class="right">
 
-                        <p>Tổng hợp dữ liệu TECHWORD</p>
+                        <p id="namep">Tổng hợp dữ liệu TECHWORD</p>
 
                         <div class="showdata">
                             <div class="View">
@@ -84,16 +84,16 @@
                         </div>
 
 
-                        <p>Quản lý bài viết TECHWORD</p>
+                            <p id="namep">Quản lý bài viết TECHWORD</p>
 
                         <table>
-                            <tr>
-                                <th class="Pid">ID</th>
-                                <th class="Pname">Name</th>
-                                <th class="title">Title</th>
-                                <th class="describe">Describe</th>
-                                <th class="category">Category</th>
-                                <th>Edit</th>
+                            <tr class="taname">
+                                <th class="Pida">ID</th>
+                                <th class="Pnamea">Tên</th>
+                                <th class="titlea">Tiêu Đề</th>
+                                <th class="describea">Nội Dung</th>
+                                <th class="categorya">Danh Mục</th>
+                                <th class="editnamea">Chỉnh Sửa</th>
                             </tr>
 
                         </table>
@@ -106,16 +106,16 @@
                                         <th class="title"><a href="DetailControl?id=${o.pid}">${o.title}</a></th>
                                         <th class="describe"><a href="DetailControl?id=${o.pid}">${o.describe}</a></th>
                                         <th class="category"><a href="DetailControl?id=${o.pid}">${o.category}</a></th>
-                                        <th>
+                                        <th class="edit">
                                             <div class="deletebutton">
                                                 <a href="Loadnews?Pid=${o.pid}">
-                                                    <button type="submit">Sửa bài viết</button>
+                                                    <button type="submit">Sửa</button>
                                                 </a>
                                             </div>
 
                                             <div class="deletebutton">
                                                 <a href="#">
-                                                    <button onclick="show(${o.pid})" type="submit">Xóa bài viết</button>
+                                                    <button onclick="show(${o.pid})" type="submit">Xóa</button>
                                                 </a>
                                             </div>
                                         </th>

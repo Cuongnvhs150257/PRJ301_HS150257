@@ -1,5 +1,5 @@
 .containter{
-    width: 1100px;
+    width: 1200px;
     height: auto;
     margin: 0 auto;
     font-family: sans-serif;
@@ -87,7 +87,15 @@
     margin-left: 50px;
     margin-top: 50px;
 }
-
+#namep{
+    font-size: 25px;
+    text-align: center;
+    font-weight: bold;
+    font-family:'Times New Roman', Times, serif;
+    color: rgb(12, 122, 248);
+    margin-left: 200px;
+    margin-top: 50px;
+}
 .footer{
     width: 1100px;
     height: 180px;
@@ -126,7 +134,7 @@
     
 }
 .right table{
-    width: 900px;
+    width: 1000px;
     height: 50px;
     margin-top: 25px;
     background-color: rgb(12, 122, 248);
@@ -136,7 +144,7 @@
     border-right: 1px solid black;
 }
 .dash #ta{
-    width: 900px;
+    width: 1000px;
     height: 150px;
     border: 1px solid rgb(12, 122, 248);
     background-color: white;
@@ -145,26 +153,57 @@
 #ta tr th{
     border-right: 1px solid rgb(12, 122, 248);
 }
+.Pida{
+    width: 30px;
+    height: auto;
+}
 .Pid{
     width: 30px;
     height: auto;
 }
+.Pnamea{
+    width: 70px;
+    height: auto;
+}
 .Pname{
-    width: 50px;
+    width: 70px;
+    height: auto;
+}
+.titlea{
+    width: 200px;
     height: auto;
 }
 .title{
-    width: 200px;
+    width: 210px;
+    height: auto;
+}
+.describea{
+    width: 430px;
     height: auto;
 }
 .describe{
     width: 450px;
     height: auto;
 }
-.category{
-    width: 50px;
+.categorya{
+    width: 80px;
     height: auto;
     border-right: none;
+}
+.category{
+    width: 70px;
+    height: auto;
+}
+.editnamea{
+    width: 180px;
+    height: auto;
+    border: none;
+}
+.edit{
+    width: 180px;
+    height: auto;
+    display: flex;
+    border: none;
 }
 .paging{
     margin-top: 20px;
@@ -174,14 +213,16 @@
     padding-left: 10px;
 }
 .deletebutton a button{
-    width: 100px;
+    width: 75px;
     height: 35px;
     margin-bottom: 10px;
-    margin-top: 20px;
+    margin-top: 60px;
+    margin-left: 10px;
     border-radius: 5px;
     border: none;
     color: white;
     background-color: rgb(12, 122, 248);
+    border-right: none;
 }
 .deletebutton a button:hover{
     font-size: 15px;
@@ -189,14 +230,14 @@
 .showdata{
     margin-top: 30px;
     margin-bottom: 80px;
-    width: 890px;
+    width: 990px;
     height: 200px;
     border: 5px solid blue;
     display: flex;
 }
 
 .View{
-    width: 300px;
+    width: 400px;
     height: 200px;
     background-color: green;
 }
@@ -209,7 +250,7 @@
     margin-right: 20px;
 }
 .Posts{
-    width: 300px;
+    width: 400px;
     height: 200px;
     border-left: 5px solid blue;
     background-color: yellow;
@@ -223,7 +264,7 @@
     margin-right: 20px;
 }
 .Money{
-    width: 290px;
+    width: 310px;
     height: 200px;
     border-left: 5px solid blue;
     background-color: rgb(12, 122, 248);
