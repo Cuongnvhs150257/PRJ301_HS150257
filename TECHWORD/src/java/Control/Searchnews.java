@@ -6,8 +6,10 @@
 package Control;
 
 import DAO.PostsDAO;
+import Entity.Posts;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -18,8 +20,8 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author s
  */
-@WebServlet(name = "Deletenews", urlPatterns = {"/Deletenews"})
-public class Deletenews extends HttpServlet {
+@WebServlet(name = "Searchnews", urlPatterns = {"/Searchnews"})
+public class Searchnews extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -32,16 +34,39 @@ public class Deletenews extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setCharacterEncoding("UTF-8");
         response.setContentType("text/html;charset=UTF-8");
+        request.setCharacterEncoding("UTF-8");
         try {
-            String Pid = request.getParameter("Pid");
+            String des = request.getParameter("des");
+            String Pname = request.getParameter("Pname");
+            
+            String indexPage = request.getParameter("index");
+            if (indexPage == null) {
+                indexPage = "1";
+            }
+            int index = Integer.parseInt(indexPage);
             
             PostsDAO dao = new PostsDAO();
+            int count = dao.getTotalSearchbydes(des);
+            int endPage = count/3;
+            if(count % 3 != 0){
+                endPage++;
+            }
             
-            dao.deletenews(Pid);
+            int countn = dao.getTotalSearchbyPname(Pname);
+            int endPagen = countn/3;
+            if(countn % 3 != 0){
+                endPagen++;
+            }
             
-            response.sendRedirect("UploadPC");
+            List<Posts> list = dao.Searchnewsbydes(des);
+            List<Posts> listn = dao.SearchnewsbyPname(Pname);
+            
+            request.setAttribute("posts", list);
+            request.setAttribute("posts", listn);
+            request.setAttribute("endP", endPage);
+            request.setAttribute("endP", endPagen);
+            request.getRequestDispatcher("PCPage.jsp").forward(request, response);
             
         } catch (Exception e) {
         }

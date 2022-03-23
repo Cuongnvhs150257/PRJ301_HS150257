@@ -27,7 +27,7 @@
                             <li><a href="Up.jsp">Đăng tin</a></li>
                             <li><a href="Account.jsp">Tài Khoản</a></li>
                             <li><a href=""><img src="icon/notication1.png" alt=""></a></li>
-                            <li><a href=""><img src="icon/search1.png" alt=""></a></li>
+                            <li><a href="Search.jsp"><img src="icon/search1.png" alt=""></a></li>
                         </ul>
                     </div>
 

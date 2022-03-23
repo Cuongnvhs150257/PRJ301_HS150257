@@ -1,17 +1,23 @@
+<%-- 
+    Document   : Search
+    Created on : Mar 22, 2022, 8:52:45 PM
+    Author     : s
+--%>
+
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <jsp:useBean id="a" class="DAO.PostsDAO" scope="request"></jsp:useBean>
-    <link rel="icon" href="image/icon1.png">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Đăng Tin || TECHWORD.VN</title>
-    <link rel="stylesheet" href="styleup3.css">
-</head>
-<body>
+<html>
+    <head>
+        <jsp:useBean id="a" class="DAO.PostsDAO" scope="request"></jsp:useBean>
+        <link rel="icon" href="image/icon1.png">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tìm Kiếm || TECHWORD.VN</title>
+        <link rel="stylesheet" href="stylesearch.css">
+    </head>
+    <body>
         <div class="containter">
             <div class="header">
                 <div class="logo">
@@ -28,7 +34,7 @@
                     </ul>
                 </div>
                 <div class="search">
-
+    
                 </div>
                 
                 <div class="user">
@@ -59,88 +65,47 @@
                     </ul>
                 </div>
                 <div class="right">
-                <c:if test="${sessionScope.acc == null}">
-                    <div class="warning">
-                        <h1>Hãy đăng nhập tài khoản để có thể đăng tin</h1>
-
-                        <img src="image/warning1.png" alt=""/>
-
-                        <div class="arrowlogin">
-                            <img src="image/arrow1.png" alt=""/>
-                            <a href="Login.jsp">
-                                <button type="submit">Đăng nhập</button>
-                            </a>
-                            <img src="image/arrow2.png" alt=""/>
-                        </div>
-
-                    </div>
-                </c:if>
-                <c:if test="${sessionScope.acc != null}">   
-                    <p class="p1">Đăng tin tức mới lên TECHWORD</p>
+                 
+                    <p class="p1">Tìm kiếm bài viết TECHWORD</p>
 
                     <div class="upnews">
-                        <form action="Upnews" method="post">
+                        <form action="Searchnews" method="post">
+                            
                             <div class="addten">
                                 <table>
                                     <tr>
-                                        <td class="linkimgn">Tiêu Đề: </td>
+                                        <td class="linkimgn">Tìm kiếm theo Từ khóa: </td>
                                     </tr>
                                     <tr>
                                         <td>
-                                            <input class="inputlinkimg" type="text" name="title">
-                                        </td>
-                                    </tr>
-
-                                </table>
-                            </div>
-
-                            <div class="adddescribe">
-                                <table>
-                                    <tr>
-                                        <td class="linkimgn">Nội Dung: </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <input class="inputdescribe" type="text" name="describe">
-                                        </td>
-                                    </tr>
-
-                                </table>
-                            </div>
-
-                            <div class="addlinkimg">
-                                <table>
-                                    <tr>
-                                        <td class="linkimgn">Link Image: </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <input class="inputlinkimg" type="text" name="linkimg">
+                                            <input class="inputlinkimg" type="text" name="des">
                                         </td>
                                     </tr>
 
                                 </table>
                             </div>
                             
-                            <div class="category">
-
-                                <p class="choinname">Chọn Danh Mục: <p>
-                                    
-                                    <select class="choincate" name="choincate">
-                                        <option>PC_Windows</option>
-                                        <option>SmartPhone</option>
-                                        <option>SmartWatch</option>
-                                    </select>
-                            </div>
                             
+                            <div class="addten">
+                                <table>
+                                    <tr>
+                                        <td class="linkimgn">Tìm kiếm theo Tác giả: </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input class="inputlinkimg" type="text" name="Pname">
+                                        </td>
+                                    </tr>
+
+                                </table>
+                            </div>
 
                             <div class="upbutton">
-                                <button type="submit">Đăng Tin</button>
+                                <button type="submit">Tìm kiếm</button>
                             </div>
                         </form>
                     </div>
-
-                </c:if>                         
+                        
                 </div>  
     </div>
     <div class="footer">
@@ -151,5 +116,6 @@
         </div>
     </div>
         </div>          
-</body>
+    </body>
 </html>
+

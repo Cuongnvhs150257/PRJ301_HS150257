@@ -169,6 +169,85 @@ public class PostsDAO {
         }
     }
     
+    public List<Posts> Searchnewsbydes(String des){
+        
+        try {
+            List<Posts> list = new ArrayList<>();
+            String sql = "select * from Postt where Describe like ?";
+            conn = new BaseDAO().BaseDao();
+            ps = conn.prepareStatement(sql);
+            ps.setString(1, "%" + des + "%");
+            rs = ps.executeQuery();
+            while(rs.next()){
+                Posts p = new Posts (rs.getInt(1),rs.getString(2),rs.getString(3),rs.getString(4),rs.getString(5),rs.getInt(6));
+                       list.add(p);
+            }
+            return list;
+
+        } catch (Exception e) {
+        }
+        
+        return null;
+    }
+    
+     public int getTotalSearchbydes(String des){
+        
+        String sql = "select COUNT(*) from Postt\n" +
+                    "where Describe like ?";
+        try {
+            conn = new BaseDAO().BaseDao();
+            ps = conn.prepareStatement(sql);
+            ps.setString(1, "%" + des + "%");
+            rs = ps.executeQuery();
+            while(rs.next()){
+                return rs.getInt(1);
+            }
+        } catch (Exception e) {
+        }
+        
+        return 0;
+    }
+    
+    public List<Posts> SearchnewsbyPname(String Pname){
+        
+        try {
+            List<Posts> list = new ArrayList<>();
+            String sql = "select * from Postt \n" +
+                         "where Pname like ?";
+            conn = new BaseDAO().BaseDao();
+            ps = conn.prepareStatement(sql);
+            ps.setString(1, "%" + Pname + "%");
+            rs = ps.executeQuery();
+            while(rs.next()){
+                Posts p = new Posts (rs.getInt(1),rs.getString(2),rs.getString(3),rs.getString(4),rs.getString(5),rs.getInt(6));
+                       list.add(p);
+            }
+            return list;
+
+        } catch (Exception e) {
+        }
+        
+        return null;
+    }
+    
+       public int getTotalSearchbyPname(String Pname){
+        
+        String sql = "select COUNT(*) from Postt\n" +
+                    "where Pname like ?";
+        try {
+            conn = new BaseDAO().BaseDao();
+            ps = conn.prepareStatement(sql);
+            ps.setString(1, "%" + Pname + "%");
+            rs = ps.executeQuery();
+            while(rs.next()){
+                return rs.getInt(1);
+            }
+        } catch (Exception e) {
+        }
+        
+        return 0;
+    }
+    
     public static void main(String[] args) {
         PostsDAO dao = new PostsDAO();
         dao.updatenews("15","Nguyen Van Cuong", "Mong la chay dc", "aafasfnsndnsddnsjfsnfsjsfn", "https://photo.techrum.vn/images/2022/03/12/D-an-mi1393d9328694067e.jpg",2);

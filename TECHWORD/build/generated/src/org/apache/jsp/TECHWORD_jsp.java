@@ -75,7 +75,7 @@ public final class TECHWORD_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                            <li><a href=\"Up.jsp\">Đăng tin</a></li>\r\n");
       out.write("                            <li><a href=\"Account.jsp\">Tài Khoản</a></li>\r\n");
       out.write("                            <li><a href=\"\"><img src=\"icon/notication1.png\" alt=\"\"></a></li>\r\n");
-      out.write("                            <li><a href=\"\"><img src=\"icon/search1.png\" alt=\"\"></a></li>\r\n");
+      out.write("                            <li><a href=\"Search.jsp\"><img src=\"icon/search1.png\" alt=\"\"></a></li>\r\n");
       out.write("                        </ul>\r\n");
       out.write("                    </div>\r\n");
       out.write("                     \r\n");
